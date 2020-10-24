@@ -7,7 +7,7 @@ import Titles from "./typewriter-title"
 
 const heroQuery = graphql`
   {
-    file(relativePath: { eq: "hero-img.png" }) {
+    file(relativePath: { eq: "hero-img.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
