@@ -2,7 +2,8 @@
 
 ## Technologies/Dependencies
 
-- Gatsby, React
+- Gatsby
+- React
 - Headless CMS
 - React Icons
 - React Typist

@@ -12,6 +12,7 @@ const Titles = () => {
     "Full Stack Developer",
     "Software Engineer",
     "Developer Support Engineer",
+    "Open Source Contributor",
   ]
 
   return (
