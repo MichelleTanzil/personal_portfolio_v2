@@ -31,25 +31,24 @@ module.exports = {
         apiURL: `http://localhost:1337`,
         queryLimit: 1000, // Default to 100
         //   contentTypes : `experiences`, `projects`, `blogs`,
-        //   singleType : `about`
         //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
         contentTypes: [`experiences`, `projects`],
         singleTypes: [`about`],
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
-    //   options: {
-    //     fonts: [
-    //       {
-    //         family: `Roboto`,
-    //         variants: [`400`, `700`],
-    //       },
-    //       {
-    //         family: `Open Sans`,
-    //       },
-    //     ],
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Roboto`,
+            variants: [`400`, `700`],
+          },
+          {
+            family: `Open Sans`,
+          },
+        ],
+      },
+    },
   ],
 }
