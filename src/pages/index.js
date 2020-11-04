@@ -7,12 +7,13 @@ import Jobs from "../components/Jobs"
 import Projects from "../components/Projects"
 import SEO from "../components/SEO"
 import Blogs from "../components/Blogs"
+import PreLoad from "../components/PreLoad"
 
 export default ({ data }) => {
-  // const [preLoading, setpreLoading] = useState(true)
+  const [preLoading, setpreLoading] = useState(true)
 
   useEffect(() => {
-    setTimeout(() => setpreLoading(false), 6000)
+    setTimeout(() => setpreLoading(false), 2000)
   }, [])
 
   const {
@@ -21,13 +22,17 @@ export default ({ data }) => {
 
   return (
     <>
-      <Layout>
-        <Hero />
-        <SEO title="Home" description="This is the home page" />
-        <Services />
-        <Jobs />
-        <Projects projects={projects} title="featured projects" showLink />
-      </Layout>
+      {preLoading === false ? (
+        <Layout>
+          <Hero />
+          <SEO title="Home" description="This is the home page" />
+          <Services />
+          <Jobs />
+          <Projects projects={projects} title="featured projects" showLink />
+        </Layout>
+      ) : (
+        <PreLoad />
+      )}
     </>
   )
 }

@@ -8,6 +8,7 @@
 - React Icons
 - React Typist
 - React Typist Loop
+- React Helmet
 
 ## Credits
 
