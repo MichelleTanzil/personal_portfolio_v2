@@ -20,6 +20,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -49,6 +50,13 @@ module.exports = {
           {
             family: `Open Sans`,
           },
+          // {
+          //   family: `Righteous`,
+          //   variants: [`900`],
+          // },
+          // {
+          //   family: `Cursive`,
+          // },
         ],
       },
     },

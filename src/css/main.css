@@ -1,11 +1,4 @@
 /*
-===============
-Fonts
-===============
-*/
-/* @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap"); */
-
-/*
 ==============
 Variables
 ===============
@@ -1046,4 +1039,14 @@ Blog Template
   width: 15rem;
   height: 15rem;
   margin: 3rem 0;
+}
+
+/*
+===============
+Preload
+===============
+*/
+
+.pre-load {
+  text-align: center;
 }

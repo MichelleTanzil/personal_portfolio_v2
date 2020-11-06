@@ -1,7 +1,11 @@
 import React from "react"
 
 const PreLoad = () => {
-  return <div>This is the preLoad component</div>
+  return (
+    <div className="pre-load">
+      <h2>Build your story</h2>
+    </div>
+  )
 }
 
 export default PreLoad
