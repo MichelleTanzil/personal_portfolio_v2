@@ -21,7 +21,7 @@ Variables
   /* darkest grey - used for headings */
   --clr-grey-1: hsl(209, 61%, 16%);
   --clr-grey-3: hsl(209, 34%, 30%);
-  --clr-grey-4: hsl(209, 28%, 39%);
+  --clr-grey-4: #48647f;
   /* grey used for paragraphs */
   --clr-grey-5: hsl(210, 22%, 49%);
   --clr-grey-8: hsl(210, 31%, 80%);
@@ -29,7 +29,7 @@ Variables
   --clr-grey-10: hsl(210, 36%, 96%);
   --clr-green-dark: hsl(125, 67%, 35%);
   --clr-red-dark: hsl(360, 67%, 44%);
-  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-red-light: hsl(0, 71%, 66%);
   --clr-white: #fff;
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
@@ -60,7 +60,7 @@ body {
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
 }
 ul {
   list-style-type: none;
@@ -1049,4 +1049,10 @@ Preload
 
 .pre-load {
   text-align: center;
+  height: 100vh;
+  background-color: var(--clr-grey-1);
+  color: var(--clr-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

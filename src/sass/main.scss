@@ -3,17 +3,50 @@
 Variables
 ===============
 */
+// Global
+$spacing: 0.1rem;
+$light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+$dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+$max-width: 1170px;
 
 // Dark mode
 $base-primary-dk: #0c0c18;
 $font-primary-dk: #bcccdc;
+$btn-primary-dk: #48647f;
 // Light mode
 $base-primary-li: #5b9ed9;
 $font-primary-li: #102a42;
+$btn-primary-li: #b75c32;
 
 //Font families
 $ff-primary: "Noto Sans", sans-serif;
 $ff-secondary: "Open Sans", sans-serif;
+
+/*
+==============
+Global Styles
+===============
+*/
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $ff-primary;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
 
 /*
 ==============
@@ -33,4 +66,64 @@ Logo
     1px 10px 1px #f62459, 1px 18px 6px rgba(16, 16, 16, 0.4),
     1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2),
     1px 30px 60px rgba(16, 16, 16, 0.4);
+}
+
+/*
+===============
+Button styles
+===============
+*/
+.brk-btn {
+  position: relative;
+  background: none;
+  color: aqua;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 0.2em solid aqua;
+  padding: 0.5em 1em;
+}
+.brk-btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10%;
+  background: #222;
+  height: 0.3em;
+  right: 20%;
+  top: -0.21em;
+  transform: skewX(-45deg);
+  -webkit-transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.brk-btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10%;
+  background: #222;
+  height: 0.3em;
+  left: 20%;
+  bottom: -0.25em;
+  transform: skewX(45deg);
+  -webkit-transition: all 0.45 cubic-bezier(0.86, 0, 0.07, 1);
+  transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+}
+.brk-btn:hover::before {
+  right: 80%;
+}
+.brk-btn:hover::after {
+  left: 80%;
+}
+
+/*
+===============
+Preload
+===============
+*/
+
+.pre-load {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

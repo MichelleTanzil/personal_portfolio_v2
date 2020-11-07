@@ -13,7 +13,7 @@ export default ({ data }) => {
   const [preLoading, setpreLoading] = useState(true)
 
   useEffect(() => {
-    setTimeout(() => setpreLoading(false), 2000)
+    setTimeout(() => setpreLoading(false), 1000)
   }, [])
 
   const {
