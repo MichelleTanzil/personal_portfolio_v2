@@ -13,8 +13,10 @@ $max-width: 1170px;
 $base-primary-dk: #0c0c18;
 $font-primary-dk: #bcccdc;
 $btn-primary-dk: #48647f;
+
 // Light mode
-$base-primary-li: #5b9ed9;
+$base-alpha-li: #5b9ed9;
+$base-beta-li: #324d67;
 $font-primary-li: #102a42;
 $btn-primary-li: #b75c32;
 
@@ -22,6 +24,8 @@ $btn-primary-li: #b75c32;
 $ff-primary: "Noto Sans", sans-serif;
 $ff-secondary: "Open Sans", sans-serif;
 
+$spacing: 0.2rem;
+$transition: all 0.3s linear;
 /*
 ==============
 Global Styles
@@ -36,9 +40,11 @@ Global Styles
 }
 
 body {
-  font-family: $ff-primary;
+  font-family: $ff-secondary;
   line-height: 1.5;
   font-size: 0.875rem;
+  color: $font-primary-li;
+  margin-top: 5rem;
 }
 
 ul {
@@ -46,6 +52,34 @@ ul {
 }
 a {
   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $ff-primary;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  color: $base-beta-li;
 }
 
 /*
@@ -62,7 +96,7 @@ Navbar
   display: flex;
   align-items: center;
   z-index: 200;
-  background: var(--clr-white);
+  background: transparent;
 }
 .nav-center {
   width: 90vw;
@@ -79,6 +113,56 @@ Navbar
 }
 .nav-links {
   display: none;
+}
+.toggle-btn {
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color: $base-beta-li;
+  cursor: pointer;
+  transition: $transition;
+}
+.toggle-btn:hover {
+  color: $base-alpha-li;
+}
+.nav-links {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .toggle-btn {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .nav-links li {
+    margin-right: 2rem;
+  }
+  .nav-links a {
+    text-transform: capitalize;
+    color: $base-beta-li;
+    font-weight: bold;
+    letter-spacing: $spacing;
+    transition: $transition;
+    padding: 0.5rem 0;
+  }
+  .nav-links a:hover {
+    color: $base-beta-li;
+    box-shadow: 0px 2px $base-beta-li;
+  }
+  .nav-center {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navbar {
+    background: transparent;
+  }
 }
 /*
 ===============
