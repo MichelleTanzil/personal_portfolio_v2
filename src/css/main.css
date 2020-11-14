@@ -28,7 +28,7 @@ Variables
   --clr-grey-9: hsl(212, 33%, 89%);
   --clr-grey-10: hsl(210, 36%, 96%);
   --clr-green-dark: hsl(125, 67%, 35%);
-  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-dark: rgb(187, 37, 37);
   --clr-red-light: hsl(0, 71%, 66%);
   --clr-white: #fff;
   --ff-primary: "Roboto", sans-serif;
