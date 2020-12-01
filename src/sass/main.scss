@@ -346,6 +346,7 @@ Button styles
   text-decoration: none;
   border: 0.2em solid aqua;
   padding: 0.5em 1em;
+  box-shadow: $dark-shadow;
 }
 .brk-btn::before {
   content: "";
@@ -402,6 +403,66 @@ Social Links
 //   color: var(--clr-primary-5);
 // }
 
+/*
+===============
+Hero
+===============
+*/
+.hero {
+  margin-top: -5rem;
+  padding-top: 5rem;
+  height: 100vh;
+  background: $background-color;
+  position: relative;
+}
+
+.hero-center {
+  height: 100%;
+  display: grid;
+  align-items: center;
+}
+
+.hero .underline {
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+}
+.hero-info {
+  background: $base-beta-li;
+}
+.hero-img {
+  display: none;
+}
+.hero-info .typing-titles {
+  color: $font-primary-li;
+}
+
+.hero-icons {
+  justify-items: flex-start;
+}
+.hero .brk-btn {
+  margin-top: 1.25rem;
+}
+
+.custom-shape-divider-bottom-1606793282 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1606793282 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 163px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1606793282 .shape-fill {
+  fill: red;
+}
 /*
 ===============
 Preload
