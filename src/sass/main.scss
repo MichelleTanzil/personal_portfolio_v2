@@ -21,6 +21,7 @@ $font-primary-li: #102a42;
 $btn-primary-li: #b75c32;
 $btn-secondary-li: #708090;
 $background-color: #f8f8ff;
+$white: #fff;
 
 //Font families
 $ff-primary: "Noto Sans", sans-serif;
@@ -37,6 +38,11 @@ $radius: 0.25rem;
 $desktop-width: 1170px;
 $tablet-width: 768px;
 $mobile-width: 360px;
+
+.section-title {
+  margin-bottom: 4rem;
+  text-align: center;
+}
 
 /*
 ==============
@@ -399,7 +405,7 @@ Social Links
 .social-link {
   font-size: 1.75rem;
   // color: var(--clr-grey-1);
-  // transition: var(--transition);
+  // transition: $transition;
 }
 // .social-link:hover {
 //   color: var(--clr-primary-5);
@@ -493,8 +499,62 @@ Hero
   //   font-size: 1rem;
   //   line-height: 1;
   // }
+
   .hero-img {
     width: 250px;
+  }
+}
+
+/*
+===============
+Services
+===============
+*/
+.service {
+  background: $white;
+  padding: 3rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: $radius;
+  text-align: center;
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.service .underline {
+  width: 3rem;
+  height: 0.12rem;
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+.service p {
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+.service:hover {
+  background: $base-beta-li;
+  color: $base-alpha-li;
+}
+.service:hover p {
+  color: $base-alpha-li;
+}
+.service:hover .underline {
+  background: $base-alpha-li;
+}
+@media screen and (min-width: 676px) {
+  .services-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 2rem;
+    -moz-column-gap: 2rem;
+    column-gap: 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .services-center {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
