@@ -20,6 +20,7 @@ $base-beta-li: #324d67;
 $font-primary-li: #102a42;
 $btn-primary-li: #b75c32;
 $btn-secondary-li: #708090;
+$btn-other-li: #4c5c96;
 $background-color: #f8f8ff;
 $white: #fff;
 
@@ -84,7 +85,7 @@ h4 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 h2 {
   font-size: 2rem;
@@ -347,12 +348,12 @@ Button styles
 .brk-btn {
   position: relative;
   background: none;
-  color: aqua;
-  background-color: $logo-red-li;
+  color: $font-primary-dk;
+  background-color: $btn-primary-li;
   text-transform: uppercase;
   text-decoration: none;
-  border: 0.2em solid aqua;
-  padding: 0.5em 1em;
+  border: 0.3em solid $btn-other-li;
+  padding: 0.75em 1.5em;
   box-shadow: $dark-shadow;
   border-radius: 0.35rem;
 }
@@ -361,10 +362,10 @@ Button styles
   display: block;
   position: absolute;
   width: 10%;
-  background: #222;
-  height: 0.3em;
-  right: 20%;
-  top: -0.21em;
+  background: #2e3141;
+  height: 0.35em;
+  right: 10%;
+  top: -0.35em;
   transform: skewX(-45deg);
   -webkit-transition: all 0.55s cubic-bezier(0.86, 0, 0.07, 1);
   transition: all 0.55s cubic-bezier(0.86, 0, 0.07, 1);
@@ -375,9 +376,9 @@ Button styles
   position: absolute;
   width: 10%;
   background: #222;
-  height: 0.3em;
-  left: 20%;
-  bottom: -0.25em;
+  height: 0.35em;
+  left: 10%;
+  bottom: -0.35em;
   transform: skewX(45deg);
   -webkit-transition: all 0.45 cubic-bezier(0.86, 0, 0.07, 1);
   transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
@@ -440,10 +441,13 @@ Hero
 }
 .hero-img {
   display: none;
+  border: 5px solid $btn-primary-li;
+  border-radius: 30%;
 }
 .hero-info .typing-titles {
   color: $font-primary-li;
   margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
 
 .hero-icons {
@@ -454,25 +458,41 @@ Hero
 }
 
 //Wave pattern
-.custom-shape-divider-bottom-1606793282 {
+.custom-shape-divider-bottom-1607810345 {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
   line-height: 0;
+  transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1606793282 svg {
+.custom-shape-divider-bottom-1607810345 svg {
   position: relative;
   display: block;
-  width: calc(100% + 1.3px);
-  height: 163px;
-  transform: rotateY(180deg);
+  width: calc(158% + 1.3px);
+  height: 118px;
 }
 
-.custom-shape-divider-bottom-1606793282 .shape-fill {
-  fill: red;
+.custom-shape-divider-bottom-1607810345 .shape-fill {
+  fill: $base-alpha-li;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .custom-shape-divider-bottom-1607810345 svg {
+    width: calc(124% + 1.3px);
+    height: 73px;
+  }
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .custom-shape-divider-bottom-1607810121 svg {
+    width: calc(139% + 1.3px);
+    height: 164px;
+  }
 }
 
 @media screen and (min-width: $tablet-width) {
@@ -491,7 +511,7 @@ Hero
     display: block;
     grid-row: 1/1;
     grid-column: 8/-1;
-    width: 100px;
+    width: 200px;
   }
 }
 @media screen and (min-width: $desktop-width) {
@@ -501,7 +521,7 @@ Hero
   // }
 
   .hero-img {
-    width: 250px;
+    width: 350px;
   }
 }
 
@@ -557,6 +577,12 @@ Services
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+/*
+===============
+Services
+===============
+*/
 .experience-container {
   background-color: #2e3141;
   padding: 2rem 0;
