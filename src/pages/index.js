@@ -8,7 +8,7 @@ import Projects from "../components/Projects"
 import SEO from "../components/SEO"
 import Blogs from "../components/Blogs"
 import PreLoad from "../components/PreLoad"
-import Timeline from "../components/Timeline"
+import Timeline from "../components/Timeline/MainTimeline"
 
 export default ({ data }) => {
   const [preLoading, setpreLoading] = useState(true)

@@ -4,8 +4,8 @@ import {
 } from "react-vertical-timeline-component"
 import "react-vertical-timeline-component/style.min.css"
 import React from "react"
-import Title from "./Title"
-import { FaBriefcase, FaSchool, FaStar } from "react-icons/fa"
+import Title from "../Title"
+import { FaBriefcase, FaSchool } from "react-icons/fa"
 
 const Timeline = () => {
   return (
@@ -13,10 +13,13 @@ const Timeline = () => {
       <Title title="Professional Experience" />
       <VerticalTimeline>
         <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
+          className="vertical-timeline-element--work vertical-timeline-custom-line-down"
+          iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
           date="2020 - present"
           icon={<FaBriefcase />}
+          onTimelineElementClick={() => {
+            alert("clicked!")
+          }}
         >
           <h3 className="vertical-timeline-element-title">
             Developer Support Engineer
