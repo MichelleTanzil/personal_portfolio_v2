@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Title from "../components/Title"
 import Image from "gatsby-image"
 import SEO from "../components/SEO"
+import TimelineContainer from "../components/Timeline/TimelineContainer"
 
 const About = ({
   data: {
@@ -17,6 +18,7 @@ const About = ({
       <section className="about-page">
         <div className="section-center about-center">
           <Image fluid={image.childImageSharp.fluid} className="about-img" />
+          <TimelineContainer />
           <article className="about-text">
             <Title title={title} />
             <p>{info}</p>
