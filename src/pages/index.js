@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Hero from "../components/hero/Hero"
 import Services from "../components/Services"
-import Jobs from "../components/Jobs"
 import Projects from "../components/Projects"
 import SEO from "../components/SEO"
 import Blogs from "../components/Blogs"
@@ -29,7 +28,6 @@ export default ({ data }) => {
           <SEO title="Home" description="This is the home page" />
           <TimelineContainer />
           <Services />
-          <Jobs />
           <Projects projects={projects} title="featured projects" showLink />
         </Layout>
       ) : (
