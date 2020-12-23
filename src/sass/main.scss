@@ -62,6 +62,24 @@ p {
   text-align: center;
 }
 
+.section {
+  padding: 5rem 0;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.underline {
+  width: 7rem;
+  height: 0.25rem;
+  margin-bottom: 1.25rem;
+  background: $hover;
+  margin-left: auto;
+  margin-right: auto;
+}
 /*
 ===============
 Navbar
@@ -458,7 +476,7 @@ Services
 .service {
   background: $white;
   padding: 3rem 1.5rem;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
   border-radius: $radius;
   text-align: center;
   -webkit-transition: $transition;
@@ -488,16 +506,16 @@ Services
 .service:hover .underline {
   background: $base-alpha-li;
 }
-@media screen and (min-width: 676px) {
+@media screen and (min-width: $tablet-width) {
   .services-center {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     -webkit-column-gap: 2rem;
     -moz-column-gap: 2rem;
     column-gap: 2rem;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: $desktop-width) {
   .services-center {
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -505,12 +523,11 @@ Services
 
 /*
 ===============
-Services
+Experiences
 ===============
 */
 .experience-container {
   background-color: #2e3141;
-  padding: 2rem 0;
 }
 
 /*
