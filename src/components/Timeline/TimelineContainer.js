@@ -9,9 +9,8 @@ const TimelineContainer = () => {
   }
 
   return (
-    <div class="experience-container">
+    <div className="section experience-container">
       <Title title="Professional Experience" />
-
       {isOpen ? (
         <MarketingTimeline handleOpen={handleOpen} />
       ) : (

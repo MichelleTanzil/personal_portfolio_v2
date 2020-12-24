@@ -26,8 +26,8 @@ export default ({ data }) => {
         <Layout>
           <Hero />
           <SEO title="Home" description="This is the home page" />
-          <TimelineContainer />
           <Services />
+          <TimelineContainer />
           <Projects projects={projects} title="featured projects" showLink />
         </Layout>
       ) : (
