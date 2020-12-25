@@ -6,8 +6,8 @@ const Footer = () => {
       <div>
         <SocialLinks styleClass="footer-links"></SocialLinks>
         <h4>
-          copyright&copy;{new Date().getFullYear()}
-          <span>Michelle Tanzil</span> all rights reserved
+          &copy;{new Date().getFullYear()}
+          <span> Michelle Tanzil. </span> All rights reserved
         </h4>
       </div>
     </footer>
