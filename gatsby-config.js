@@ -4,6 +4,11 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+//Envinroment variables
+require("dotenv").config({
+  path: `.env`,
+})
+
 module.exports = {
   siteMetadata: {
     title: "Michelle Tanzil's Portfolio",
@@ -28,15 +33,26 @@ module.exports = {
         path: `${__dirname}/src/assets/`,
       },
     },
+    // {
+    //   resolve: `gatsby-source-strapi`,
+    //   options: {
+    //     apiURL: `http://localhost:1337`,
+    //     queryLimit: 1000, // Default to 100
+    //     //   contentTypes : `experiences`, `projects`, `blogs`,
+    //     //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
+    //     contentTypes: [`experiences`, `projects`],
+    //     singleTypes: [`about`],
+    //   },
+    // },
     {
-      resolve: `gatsby-source-strapi`,
+      resolve: `gatsby-source-prismic`,
       options: {
-        apiURL: `http://localhost:1337`,
-        queryLimit: 1000, // Default to 100
-        //   contentTypes : `experiences`, `projects`, `blogs`,
-        //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
-        contentTypes: [`experiences`, `projects`],
-        singleTypes: [`about`],
+        repositoryName: process.env.PRISMIC_REPOSITORY_NAME,
+        accessToken: process.env.PRISMIC_ACCESS_TOKEN,
+        schemas: {
+          about: require("./src/schemas/about.json"),
+          projects: require("./src/schemas/projects.json"),
+        },
       },
     },
     {
