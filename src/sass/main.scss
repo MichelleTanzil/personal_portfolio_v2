@@ -362,12 +362,18 @@ Button styles
   transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
 }
 .brk-btn:hover::before {
-  right: 80%;
+  right: 85%;
 }
 .brk-btn:hover::after {
-  left: 80%;
+  left: 85%;
 }
-
+.btn-center {
+  margin: 0 auto;
+  display: block;
+  width: 12rem;
+  text-align: center;
+  margin-top: 3rem;
+}
 /*
 ===============
 Social Links
@@ -384,7 +390,7 @@ Social Links
 .social-link {
   font-size: 1.75rem;
   // color: var(--clr-grey-1);
-  // transition: $transition;
+  transition: $transition;
 }
 // .social-link:hover {
 //   color: var(--clr-primary-5);
@@ -611,7 +617,7 @@ Projects
   opacity: 0;
 }
 .project-info {
-  background: var(--clr-white);
+  background: $white;
   padding: 1rem 2rem;
   border-bottom-left-radius: $radius;
   border-bottom-right-radius: $radius;
@@ -701,6 +707,37 @@ Projects
 }
 /*
 ===============
+Footer
+===============
+*/
+.footer {
+  height: 9rem;
+  background: #222;
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+.footer h4 {
+  margin-top: 0.5rem;
+  color: $font-grey-li;
+  font-weight: normal;
+  // text-transform: uppercase;
+}
+.footer h4 span {
+  color: $font-grey-li;
+}
+.footer-links {
+  margin: 0 auto 1rem auto;
+}
+.footer .social-link {
+  color: $font-grey-li;
+}
+.footer .social-link:hover {
+  color: $white;
+}
+
+/*
+===============
 Preload
 ===============
 */
@@ -710,4 +747,7 @@ Preload
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.icons {
 }
