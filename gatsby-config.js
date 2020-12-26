@@ -33,17 +33,6 @@ module.exports = {
         path: `${__dirname}/src/assets/`,
       },
     },
-    // {
-    //   resolve: `gatsby-source-strapi`,
-    //   options: {
-    //     apiURL: `http://localhost:1337`,
-    //     queryLimit: 1000, // Default to 100
-    //     //   contentTypes : `experiences`, `projects`, `blogs`,
-    //     //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
-    //     contentTypes: [`experiences`, `projects`],
-    //     singleTypes: [`about`],
-    //   },
-    // },
     {
       resolve: `gatsby-source-prismic`,
       options: {
@@ -66,13 +55,6 @@ module.exports = {
           {
             family: `Open Sans`,
           },
-          // {
-          //   family: `Righteous`,
-          //   variants: [`900`],
-          // },
-          // {
-          //   family: `Cursive`,
-          // },
         ],
       },
     },
