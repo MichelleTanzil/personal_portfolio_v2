@@ -4,11 +4,8 @@ import { graphql } from "gatsby"
 import Projects from "../components/Projects"
 import SEO from "../components/SEO"
 
-const ProjectsPage = ({
-  data: {
-    allStrapiProjects: { nodes: projects },
-  },
-}) => {
+const ProjectsPage = ({ data }) => {
+  const { nodes: projects } = data.allPrismicProjects
   return (
     <Layout>
       <SEO title="All Projects" description="All of my projects" />
@@ -23,23 +20,31 @@ export default ProjectsPage
 
 export const query = graphql`
   {
-    allStrapiProjects {
+    allPrismicProjects {
       nodes {
-        github
         id
-        description
-        url
-        title
-        image {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
+        data {
+          description {
+            text
+          }
+          github {
+            url
+          }
+          tech_stack {
+            technology {
+              text
+            }
+            icon {
+              text
             }
           }
-        }
-        stack {
-          desc
-          id
+          title {
+            text
+          }
+          url {
+            url
+          }
+          isfeatured
         }
       }
     }
