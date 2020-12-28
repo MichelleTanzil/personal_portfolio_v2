@@ -1,8 +1,7 @@
-import React, { Component } from "react"
+import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import Title from "../components/Title"
-import Image from "gatsby-image"
 import SEO from "../components/SEO"
 import * as FontAwesome from "react-icons/fa"
 import * as SiIcons from "react-icons/si"
@@ -116,8 +115,8 @@ export const query = graphql`
             text
           }
           image {
-            fluid {
-              src
+            fluid(maxWidth: 1000) {
+              ...GatsbyPrismicImageFluid
             }
             alt
           }

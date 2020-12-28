@@ -1,5 +1,4 @@
 import React from "react"
-import Image from "gatsby-image"
 import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
 import * as FontAwesome from "react-icons/fa"
 import * as SiIcons from "react-icons/si"
@@ -10,7 +9,12 @@ const Project = project => {
     tech_stack,
     title: { text: titleText },
     url: { url: deployedLink },
+    image: {
+      fluid: { src: image_url },
+    },
+    image: { alt: image_alt },
   } = project.data
+  console.log(`Image: ${image_url}`)
   const techStack = tech_stack.map(tech => {
     return {
       techName: tech.technology.text,
@@ -20,7 +24,7 @@ const Project = project => {
 
   return (
     <article className="project">
-      {/* <Image fluid={image.childImageSharp.fluid} className="project-img" /> */}
+      <img src={image_url} className="project-img" alt={image_alt} />
       <div className="project-info">
         <h3>{titleText}</h3>
         <p className="project-desc">{descrip}</p>

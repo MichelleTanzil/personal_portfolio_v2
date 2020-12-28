@@ -45,6 +45,12 @@ export const query = graphql`
             url
           }
           isfeatured
+          image {
+            fluid(maxWidth: 1000) {
+              ...GatsbyPrismicImageFluid
+            }
+            alt
+          }
         }
       }
     }
