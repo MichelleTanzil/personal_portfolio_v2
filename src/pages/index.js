@@ -16,9 +16,9 @@ export default ({ data }) => {
     setTimeout(() => setpreLoading(false), 1000)
   }, [])
 
-  const {
-    allStrapiProjects: { nodes: projects },
-  } = data
+  // const {
+  //   allStrapiProjects: { nodes: projects },
+  // } = data
 
   return (
     <>
@@ -28,7 +28,8 @@ export default ({ data }) => {
           <SEO title="Home" description="This is the home page" />
           <Services />
           <TimelineContainer />
-          <Projects projects={projects} title="featured projects" showLink />
+          {/* <Projects projects={projects} title="featured projects" showLink /> */}
+          <Blogs />
         </Layout>
       ) : (
         <PreLoad />
@@ -36,27 +37,27 @@ export default ({ data }) => {
     </>
   )
 }
-export const query = graphql`
-  {
-    allStrapiProjects(filter: { feature: { eq: true } }) {
-      nodes {
-        github
-        id
-        description
-        url
-        title
-        image {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        stack {
-          desc
-          id
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   {
+//     allStrapiProjects(filter: { feature: { eq: true } }) {
+//       nodes {
+//         github
+//         id
+//         description
+//         url
+//         title
+//         image {
+//           childImageSharp {
+//             fluid {
+//               ...GatsbyImageSharpFluid
+//             }
+//           }
+//         }
+//         stack {
+//           desc
+//           id
+//         }
+//       }
+//     }
+//   }
+// `

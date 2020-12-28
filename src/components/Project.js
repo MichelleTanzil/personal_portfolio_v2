@@ -17,7 +17,6 @@ const Project = project => {
       icon: tech.icon.text,
     }
   })
-  console.log(`tech_stack: ${JSON.stringify(tech_stack)}`)
 
   return (
     <article className="project">
@@ -52,7 +51,5 @@ const Project = project => {
     </article>
   )
 }
-
-Project.propTypes = {}
 
 export default Project
