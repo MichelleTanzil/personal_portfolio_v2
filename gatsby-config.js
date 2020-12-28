@@ -21,8 +21,8 @@ module.exports = {
       "software, developer, dev, full stack, builder, problem solver, Michelle, Tanzil",
   },
   plugins: [
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-sass`,
@@ -45,17 +45,9 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `Roboto`,
-            variants: [`400`, `700`],
-          },
-          {
-            family: `Open Sans`,
-          },
-        ],
+        fonts: [`Roboto\: 400, 700`, `Open Sans`],
       },
     },
   ],
