@@ -65,7 +65,7 @@ export const query = graphql`
           }
           isfeatured
           image {
-            fluid(maxWidth: 1000) {
+            fluid(maxWidth: 500) {
               src
             }
             alt

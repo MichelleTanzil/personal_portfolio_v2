@@ -47,7 +47,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Roboto\: 400, 700`, `Open Sans`],
+        fonts: [
+          `Roboto\: 400, 700`,
+          `Open Sans`,
+          `Noto Sans`,
+          `Raleway`,
+          `Helvetica`,
+        ],
       },
     },
   ],

@@ -24,32 +24,39 @@ const Project = project => {
 
   return (
     <article className="project">
-      <img src={image_url} className="project-img" alt={image_alt} />
       <div className="project-info">
-        <h3>{titleText}</h3>
-        <p className="project-desc">{descrip}</p>
-        <div className="project-stack">
-          {techStack.map((tech, index) => {
-            // Dynamically create the icons
-            const IconName =
-              tech.icon[0] === "F" ? FontAwesome[tech.icon] : SiIcons[tech.icon]
-            return (
-              <div key={`Project_${titleText}_tech_${index}`}>
-                <p>
-                  {tech.techName}{" "}
-                  {React.createElement(IconName, { className: "icons" })}
-                </p>
-              </div>
-            )
-          })}
-        </div>
-        <div className="project-links">
-          <a href={githubLink}>
-            <FaGithubSquare className="project-icon"></FaGithubSquare>
-          </a>
-          <a href={deployedLink}>
-            <FaShareSquare className="project-icon"></FaShareSquare>
-          </a>
+        <img src={image_url} className="project-img" alt={image_alt} />
+        <div className="project-details">
+          <h3>{titleText}</h3>
+          <div className="project-stack">
+            {techStack.map((tech, index) => {
+              // Dynamically create the icons
+              const IconName =
+                tech.icon[0] === "F"
+                  ? FontAwesome[tech.icon]
+                  : SiIcons[tech.icon]
+              return (
+                <div key={`Project_${titleText}_tech_${index}`}>
+                  <p className="tech-stack">
+                    {React.createElement(IconName, { className: "icons" })}
+                    {tech.techName}{" "}
+                  </p>
+                </div>
+              )
+            })}
+          </div>
+          <div className="project-links">
+            {githubLink && (
+              <a href={githubLink}>
+                <FaGithubSquare className="project-icon"></FaGithubSquare>
+              </a>
+            )}
+            {deployedLink && (
+              <a href={deployedLink}>
+                <FaShareSquare className="project-icon"></FaShareSquare>
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </article>

@@ -34,10 +34,11 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: $ff-primary;
+  font-family: $ff-titles;
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
+  letter-spacing: 0.1em;
 }
 
 h1 {
@@ -69,7 +70,7 @@ p {
 .section-center {
   width: 90vw;
   margin: 0 auto;
-  max-width: 1170px;
+  max-width: 1300px;
 }
 
 .underline {
@@ -600,73 +601,71 @@ Projects
 ===============
 */
 .projects {
-  background: #4c5c96;
+  background: $background-color;
+}
+.projects-center {
+  display: grid;
 }
 .project {
-  display: grid;
   margin-bottom: 4rem;
+}
+
+.project-details {
+  padding: 1rem 2rem;
 }
 .project-img {
   border-top-left-radius: $radius;
   border-top-right-radius: $radius;
-  height: 19rem;
-  z-index: 1;
-}
-.project-img::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+  object-fit: cover;
   width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom right, $background-color, #222);
-  opacity: 0.85;
-  transition: $transition;
 }
-.project:hover .project-img::after {
-  opacity: 0;
-}
+
 .project-info {
   background: $white;
-  padding: 1rem 2rem;
   border-bottom-left-radius: $radius;
   border-bottom-right-radius: $radius;
+  color: $font-secondary-li;
+  box-shadow: $dark-shadow;
+  transition: $transition;
 }
-.project-number {
-  display: inline-block;
-  font-size: 1.25rem;
-  color: var(--clr-primary-5);
-  margin-bottom: 0.75rem;
+
+.project-info:hover {
+  box-shadow: $light-shadow;
+  transform: translateY(2px);
 }
+
 .project-info h3 {
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
+  line-height: 27px;
+  color: $font-primary-li;
+  border-bottom: $underline;
+  padding-bottom: $bottom-padding;
 }
-.project-desc {
-  word-spacing: 15px;
-  color: grey;
-}
+
 .project-stack {
   margin-bottom: 1rem;
+  display: grid;
 }
-.project-stack span,
-.about-stack span {
-  display: inline-block;
-  background: $background-color;
-  color: lightgrey;
-  margin-right: 0.5rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: $radius;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.85rem;
-}
+
 .about-stack span {
   margin-top: 0.5rem;
 }
+.tech-stack {
+  padding: 0.5em;
+  text-align: center;
+  background-color: $background-secondary-color;
+  margin: 0.5em;
+  color: $font-red-li;
+  border-radius: $radius;
+}
+.icons {
+  margin: 0 auto;
+  display: block;
+}
 .project-icon {
-  color: grey;
+  color: $font-red-li;
   font-size: 1.25rem;
   margin-right: 0.5rem;
   transition: $transition;
@@ -674,45 +673,41 @@ Projects
 .project-icon:hover {
   color: grey;
 }
-@media screen and (min-width: 576px) {
+@media screen and (min-width: $mobile-width) {
   .project-img {
     height: 19rem;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $tablet-width) {
   .project-img {
     height: 22rem;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: $desktop-width) {
+  .projects-center {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.5em;
+  }
   .project {
-    grid-template-columns: repeat(12, 1fr);
-    align-items: center;
+    margin: 2rem;
   }
   .project-img {
-    grid-column: 1 / span 8;
-    /* grid-column-end: 8; */
-    grid-row: 1 / 1;
-    height: 30rem;
     border-radius: $radius;
-    box-shadow: var(--dark-shadow);
+    box-shadow: $dark-shadow;
   }
   .project-info {
     border-radius: $radius;
-    box-shadow: var(--dark-shadow);
+    box-shadow: $dark-shadow;
+  }
 
-    z-index: 1;
-    grid-column: 5 /12;
-    grid-row: 1 / 1;
+  .icons {
+    font-size: 2em;
   }
-  .project:nth-of-type(even) .project-img {
-    grid-column: 5 / -1;
-    grid-row: 1 / 1;
+  .project-stack {
+    grid-template-columns: repeat(3, 1fr);
   }
-  .project:nth-of-type(even) .project-info {
-    grid-column: 2 / span 7;
-    grid-row: 1 / 1;
-    text-align: left;
+  .project-icon {
+    font-size: 2rem;
   }
 }
 /*
@@ -731,7 +726,6 @@ Footer
   margin-top: 0.5rem;
   color: $font-grey-li;
   font-weight: normal;
-  // text-transform: uppercase;
 }
 .footer h4 span {
   color: $font-grey-li;
@@ -775,21 +769,21 @@ Contact Page
 .contact-form {
   background: $white;
   border-radius: $radius;
-  text-align: center;
-  box-shadow: $light-shadow;
   transition: $transition;
   width: 90vw;
   max-width: 35rem;
 }
-.contact-form:hover {
-  box-shadow: $dark-shadow;
-}
+
 .contact-form h3 {
   padding-top: 1.25rem;
   color: grey;
+  text-transform: uppercase;
+  padding-bottom: $bottom-padding;
+  border-bottom: $underline;
 }
+
 .form-group {
-  padding: 1rem 1.5rem;
+  padding: 1rem 0;
 }
 .form-control {
   display: block;
@@ -811,10 +805,24 @@ Contact Page
 .submit-btn {
   display: block;
   width: 100%;
-  padding: 1rem;
-  border-bottom-left-radius: $radius;
-  border-bottom-right-radius: $radius;
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
+  border-radius: $radius;
+  border: 0;
   text-transform: uppercase;
+  font-family: $ff-titles;
+  cursor: pointer;
+  font-weight: 700;
+  height: 3.75em;
+  letter-spacing: 0.1em;
+  line-height: 3.75em;
+  padding: 0 2.25em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.submit-btn:hover {
+  background-color: $base-alpha-li;
+  transition: $transition;
+  color: $white;
 }
