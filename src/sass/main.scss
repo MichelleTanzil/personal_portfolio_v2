@@ -293,41 +293,6 @@ Sidebar Animation
     opacity: 1;
   }
 }
-/*
-==============
-Logo
-===============
-*/
-
-.initials-logo {
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: "Righteous", cursive;
-  font-weight: 900;
-  text-align: center;
-  text-shadow: 1px 1px 1px $logo-blue-li, 1px 2px 1px $logo-blue-li,
-    1px 3px 1px $logo-blue-li, 1px 4px 1px $logo-blue-li,
-    1px 5px 1px $logo-blue-li, 1px 6px 1px $logo-red-li,
-    1px 7px 1px $logo-red-li, 1px 8px 1px $logo-red-li, 1px 9px 1px $logo-red-li,
-    1px 10px 1px $logo-red-li, 1px 18px 6px rgba(16, 16, 16, 0.4),
-    1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2),
-    1px 30px 60px rgba(16, 16, 16, 0.4);
-}
-@media screen and (min-width: $mobile-width) {
-  .initials-logo {
-    font-size: 2rem;
-  }
-}
-@media screen and (min-width: $tablet-width) {
-  .initials-logo {
-    font-size: 2.5rem;
-  }
-}
-@media screen and (min-width: $desktop-width) {
-  .initials-logo {
-    font-size: 3rem;
-  }
-}
 
 /*
 ===============
@@ -605,13 +570,14 @@ Projects
 }
 .projects-center {
   display: grid;
+  white-space: nowrap;
 }
 .project {
   margin-bottom: 4rem;
 }
 
 .project-details {
-  padding: 1rem 2rem;
+  padding: 1rem;
 }
 .project-img {
   border-top-left-radius: $radius;
@@ -622,41 +588,39 @@ Projects
 
 .project-info {
   background: $white;
-  border-bottom-left-radius: $radius;
-  border-bottom-right-radius: $radius;
   color: $font-secondary-li;
   box-shadow: $dark-shadow;
   transition: $transition;
-}
-
-.project-info:hover {
-  box-shadow: $light-shadow;
-  transform: translateY(2px);
+  &:hover {
+    box-shadow: $light-shadow;
+    transform: translateY(5px);
+  }
 }
 
 .project-info h3 {
   font-weight: 700;
-  margin-bottom: 1.5rem;
   font-size: 1.5rem;
   line-height: 27px;
   color: $font-primary-li;
+}
+
+.project-text {
   border-bottom: $underline;
   padding-bottom: $bottom-padding;
+  margin-bottom: 1.5rem;
+  color: $font-secondary-li;
+  letter-spacing: 0.1em;
 }
 
 .project-stack {
   margin-bottom: 1rem;
   display: grid;
-  &:hover {
-    color: grey;
-  }
 }
 
 .about-stack span {
   margin-top: 0.5rem;
 }
 .tech-stack {
-  padding: 0.5em;
   text-align: center;
   color: $btn-primary-li;
   border-radius: $radius;

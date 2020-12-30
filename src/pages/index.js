@@ -18,6 +18,7 @@ export default ({ data }) => {
 
   const {
     allPrismicProjects: { nodes: projects },
+    blog: { nodes: blogs },
   } = data
 
   return (
@@ -29,7 +30,7 @@ export default ({ data }) => {
           <Services />
           <TimelineContainer />
           <Projects projects={projects} title="featured projects" showLink />
-          <Blogs />
+          <Blogs blogs={blogs} title="blog" />
         </Layout>
       ) : (
         <PreLoad />
@@ -65,12 +66,34 @@ export const query = graphql`
           }
           isfeatured
           image {
-            fluid(maxWidth: 500) {
+            fluid(maxWidth: 1000) {
               src
             }
             alt
           }
+          narrative {
+            text
+          }
+          hashtags {
+            text
+          }
         }
+      }
+    }
+    blog: allPrismicBlog {
+      nodes {
+        data {
+          image {
+            fluid(maxWidth: 1000) {
+              src
+            }
+            alt
+          }
+          title {
+            text
+          }
+        }
+        id
       }
     }
   }

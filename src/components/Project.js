@@ -4,7 +4,8 @@ import * as FontAwesome from "react-icons/fa"
 import * as SiIcons from "react-icons/si"
 const Project = project => {
   const {
-    description: { text: descrip },
+    narrative: { text: narrative },
+    hashtags: { text: hashtags },
     github: { url: githubLink },
     tech_stack,
     title: { text: titleText },
@@ -27,6 +28,7 @@ const Project = project => {
         <img src={image_url} className="project-img" alt={image_alt} />
         <div className="project-details">
           <h3>{titleText}</h3>
+          <p className="project-text">{narrative}</p>
           <div className="project-stack">
             {techStack.map((tech, index) => {
               // Dynamically create the icons
@@ -46,16 +48,17 @@ const Project = project => {
           </div>
           <div className="project-links">
             {githubLink && (
-              <a href={githubLink}>
+              <a href={githubLink} target="_blank">
                 <FaGithubSquare className="project-icon"></FaGithubSquare>
               </a>
             )}
             {deployedLink && (
-              <a href={deployedLink}>
+              <a href={deployedLink} target="_blank">
                 <FaShareSquare className="project-icon"></FaShareSquare>
               </a>
             )}
           </div>
+          <p>{hashtags}</p>
         </div>
       </div>
     </article>
