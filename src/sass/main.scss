@@ -647,6 +647,9 @@ Projects
 .project-stack {
   margin-bottom: 1rem;
   display: grid;
+  &:hover {
+    color: grey;
+  }
 }
 
 .about-stack span {
@@ -655,9 +658,7 @@ Projects
 .tech-stack {
   padding: 0.5em;
   text-align: center;
-  background-color: $background-secondary-color;
-  margin: 0.5em;
-  color: $font-red-li;
+  color: $btn-primary-li;
   border-radius: $radius;
 }
 .icons {
@@ -669,10 +670,11 @@ Projects
   font-size: 1.25rem;
   margin-right: 0.5rem;
   transition: $transition;
+  &:hover {
+    color: grey;
+  }
 }
-.project-icon:hover {
-  color: grey;
-}
+
 @media screen and (min-width: $mobile-width) {
   .project-img {
     height: 19rem;
@@ -689,11 +691,10 @@ Projects
     column-gap: 1.5em;
   }
   .project {
-    margin: 2rem;
+    margin: 1rem 0.75rem;
   }
   .project-img {
-    border-radius: $radius;
-    box-shadow: $dark-shadow;
+    box-shadow: $light-shadow;
   }
   .project-info {
     border-radius: $radius;
@@ -705,6 +706,7 @@ Projects
   }
   .project-stack {
     grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
   }
   .project-icon {
     font-size: 2rem;

@@ -41,6 +41,7 @@ module.exports = {
         schemas: {
           about: require("./src/schemas/about.json"),
           projects: require("./src/schemas/projects.json"),
+          blog: require("./src/schemas/blog.json"),
         },
       },
     },

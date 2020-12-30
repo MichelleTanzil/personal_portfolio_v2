@@ -14,7 +14,6 @@ const Project = project => {
     },
     image: { alt: image_alt },
   } = project.data
-  console.log(`Image: ${image_url}`)
   const techStack = tech_stack.map(tech => {
     return {
       techName: tech.technology.text,
