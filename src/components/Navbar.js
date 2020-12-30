@@ -6,7 +6,6 @@ const Navbar = ({ toggleSidebar }) => {
     <nav className="navbar">
       <div className="nav-center">
         <div className="nav-header">
-          <p className="initials-logo">MT</p>
           <button type="button" className="toggle-btn" onClick={toggleSidebar}>
             <FaAlignRight></FaAlignRight>
           </button>
