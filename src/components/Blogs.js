@@ -6,7 +6,7 @@ export const Blogs = ({ blogs, title }) => {
   return (
     <section className="section">
       <Title title={title} />
-      <div className="section-center">
+      <div className="section-center blogs">
         {blogs.map(blog => {
           return <Blog key={blog.id} {...blog} />
         })}

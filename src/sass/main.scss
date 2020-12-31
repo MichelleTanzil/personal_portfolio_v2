@@ -586,7 +586,7 @@ Projects
   width: 100%;
 }
 
-.project-info {
+.container-info {
   background: $white;
   color: $font-secondary-li;
   box-shadow: $dark-shadow;
@@ -597,7 +597,7 @@ Projects
   }
 }
 
-.project-info h3 {
+.container-info h3 {
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 27px;
@@ -660,7 +660,7 @@ Projects
   .project-img {
     box-shadow: $light-shadow;
   }
-  .project-info {
+  .container-info {
     border-radius: $radius;
     box-shadow: $dark-shadow;
   }
@@ -670,12 +670,51 @@ Projects
   }
   .project-stack {
     grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between;
   }
   .project-icon {
     font-size: 2rem;
   }
 }
+
+/*
+===============
+Blogs
+===============
+*/
+.blogs {
+  display: flex;
+  justify-content: center;
+}
+
+.blog {
+  margin-bottom: 3rem;
+  padding: 5em;
+}
+
+.blog-img {
+  box-shadow: $light-shadow;
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+  object-fit: cover;
+  width: 100%;
+}
+
+@media screen and (min-width: $mobile-width) {
+  .blog-img {
+    height: 15rem;
+  }
+}
+@media screen and (min-width: $tablet-width) {
+  .blog-img {
+    height: 18rem;
+  }
+}
+@media screen and (min-width: $desktop-width) {
+  .blog-img {
+    height: 20rem;
+  }
+}
+
 /*
 ===============
 Footer

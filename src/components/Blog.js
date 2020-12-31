@@ -10,12 +10,14 @@ const Blog = blog => {
   } = blog.data
   return (
     <article className="blog">
-      <div className="project-info">
-        <img src={image_url} className="project-img" alt={image_alt} />
-        <div className="project-details">
-          <h3>{titleText}</h3>
+      <Link>
+        <div className="container-info">
+          <img src={image_url} className="blog-img" alt={image_alt} />
+          <div className="project-details">
+            <h3>{titleText}</h3>
+          </div>
         </div>
-      </div>
+      </Link>
     </article>
   )
 }

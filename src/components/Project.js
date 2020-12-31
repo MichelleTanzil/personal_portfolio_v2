@@ -24,7 +24,7 @@ const Project = project => {
 
   return (
     <article className="project">
-      <div className="project-info">
+      <div className="container-info">
         <img src={image_url} className="project-img" alt={image_alt} />
         <div className="project-details">
           <h3>{titleText}</h3>
