@@ -7,7 +7,6 @@ import Projects from "../components/Projects"
 import SEO from "../components/SEO"
 import Blogs from "../components/Blogs"
 import PreLoad from "../components/PreLoad"
-import TimelineContainer from "../components/Timeline/TimelineContainer"
 
 export default ({ data }) => {
   const [preLoading, setpreLoading] = useState(true)
@@ -28,7 +27,6 @@ export default ({ data }) => {
           <Hero />
           <SEO title="Home" description="This is the home page" />
           <Services />
-          <TimelineContainer />
           <Projects projects={projects} title="featured projects" showLink />
           <Blogs blogs={blogs} title="blog" />
         </Layout>
