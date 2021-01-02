@@ -7,6 +7,7 @@ import Projects from "../components/Projects"
 import SEO from "../components/SEO"
 import Blogs from "../components/Blogs"
 import PreLoad from "../components/PreLoad"
+import Contact from "../components/Contact"
 
 export default ({ data }) => {
   const [preLoading, setpreLoading] = useState(true)
@@ -25,10 +26,11 @@ export default ({ data }) => {
       {preLoading === false ? (
         <Layout>
           <Hero />
-          <SEO title="Home" description="This is the home page" />
+          <SEO title="Home" description="Home page" />
           <Services />
           <Projects projects={projects} title="featured projects" showLink />
           <Blogs blogs={blogs} title="blog" />
+          <Contact />
         </Layout>
       ) : (
         <PreLoad />
@@ -89,6 +91,9 @@ export const query = graphql`
           }
           title {
             text
+          }
+          url {
+            url
           }
         }
         id

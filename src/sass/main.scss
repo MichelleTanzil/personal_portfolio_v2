@@ -83,7 +83,6 @@ p {
 .about-page,
 .blog-page,
 .blog-template,
-.contact-page,
 .error-page,
 .projects-page {
   background: $white;
@@ -712,6 +711,82 @@ Blogs
 
 /*
 ===============
+Contact
+===============
+*/
+
+.contact {
+  background: $white;
+  min-height: calc(100vh - 9rem);
+}
+.contact-page {
+  display: grid;
+  place-items: center;
+  padding: 5rem 0;
+}
+.contact-form {
+  background: $white;
+  border-radius: $radius;
+  transition: $transition;
+  width: 90vw;
+  max-width: 35rem;
+}
+
+.contact-form h3 {
+  padding-top: 1.25rem;
+  color: grey;
+  text-transform: uppercase;
+  padding-bottom: $bottom-padding;
+  border-bottom: $underline;
+}
+
+.form-group {
+  padding: 1rem 0;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  margin-bottom: 1.25rem;
+  background: grey;
+  border-radius: $radius;
+  text-transform: uppercase;
+  letter-spacing: $spacing;
+}
+.form-control::placeholder {
+  font-family: $ff-primary;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: $spacing;
+}
+.submit-btn {
+  display: block;
+  width: 100%;
+  border-radius: $radius;
+  border: 0;
+  text-transform: uppercase;
+  font-family: $ff-titles;
+  cursor: pointer;
+  font-weight: 700;
+  height: 3.75em;
+  letter-spacing: 0.1em;
+  line-height: 3.75em;
+  padding: 0 2.25em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.submit-btn:hover {
+  background-color: $base-alpha-li;
+  transition: $transition;
+  color: $white;
+}
+
+/*
+===============
 Footer
 ===============
 */
@@ -824,74 +899,4 @@ About Page
   .about-stack {
     grid-template-columns: repeat(4, 1fr);
   }
-}
-/*
-===============
-Contact Page
-===============
-*/
-.contact-page {
-  display: grid;
-  place-items: center;
-  padding: 5rem 0;
-}
-.contact-form {
-  background: $white;
-  border-radius: $radius;
-  transition: $transition;
-  width: 90vw;
-  max-width: 35rem;
-}
-
-.contact-form h3 {
-  padding-top: 1.25rem;
-  color: grey;
-  text-transform: uppercase;
-  padding-bottom: $bottom-padding;
-  border-bottom: $underline;
-}
-
-.form-group {
-  padding: 1rem 0;
-}
-.form-control {
-  display: block;
-  width: 100%;
-  padding: 0.75rem 1rem;
-  border: none;
-  margin-bottom: 1.25rem;
-  background: grey;
-  border-radius: $radius;
-  text-transform: uppercase;
-  letter-spacing: $spacing;
-}
-.form-control::placeholder {
-  font-family: $ff-primary;
-  color: $white;
-  text-transform: uppercase;
-  letter-spacing: $spacing;
-}
-.submit-btn {
-  display: block;
-  width: 100%;
-  border-radius: $radius;
-  border: 0;
-  text-transform: uppercase;
-  font-family: $ff-titles;
-  cursor: pointer;
-  font-weight: 700;
-  height: 3.75em;
-  letter-spacing: 0.1em;
-  line-height: 3.75em;
-  padding: 0 2.25em;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.submit-btn:hover {
-  background-color: $base-alpha-li;
-  transition: $transition;
-  color: $white;
 }
