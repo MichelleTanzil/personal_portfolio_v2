@@ -5,6 +5,7 @@ import Title from "../components/Title"
 import SEO from "../components/SEO"
 import * as FontAwesome from "react-icons/fa"
 import * as SiIcons from "react-icons/si"
+import TimelineContainer from "../components/Timeline/TimelineContainer"
 
 const About = ({ data }) => {
   //Data from Prismic
@@ -36,6 +37,7 @@ const About = ({ data }) => {
           <img src={image_url} alt={image_alt} className="about-img" />
           <article className="about-text">
             <p>{description}</p>
+            <TimelineContainer />
             {/* Skills section */}
             <section>
               <Title title={`Skills`} />
