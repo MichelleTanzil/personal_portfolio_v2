@@ -716,7 +716,7 @@ Contact
 */
 
 .contact {
-  background: $white;
+  background: #222;
   min-height: calc(100vh - 9rem);
 }
 .contact-page {
@@ -725,7 +725,7 @@ Contact
   padding: 5rem 0;
 }
 .contact-form {
-  background: $white;
+  background: #222;
   border-radius: $radius;
   transition: $transition;
   width: 90vw;
@@ -783,6 +783,26 @@ Contact
   background-color: $base-alpha-li;
   transition: $transition;
   color: $white;
+}
+.custom-shape-divider-top-1609609605 {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1609609605 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 200px;
+}
+
+.custom-shape-divider-top-1609609605 .shape-fill {
+  fill: $background-color;
 }
 
 /*
