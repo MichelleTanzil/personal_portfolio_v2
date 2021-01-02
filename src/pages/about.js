@@ -37,7 +37,6 @@ const About = ({ data }) => {
           <img src={image_url} alt={image_alt} className="about-img" />
           <article className="about-text">
             <p>{description}</p>
-            <TimelineContainer />
             {/* Skills section */}
             <section>
               <Title title={`Skills`} />
@@ -50,9 +49,9 @@ const About = ({ data }) => {
                       : SiIcons[tech.icon]
                   return (
                     <div key={`Tech_${index}`}>
-                      <p>
-                        {tech.skill}{" "}
-                        {React.createElement(IconName, { className: "icons" })}
+                      <p className="stacks">
+                        {React.createElement(IconName, { className: "icons" })}{" "}
+                        {tech.skill}
                       </p>
                     </div>
                   )
@@ -71,9 +70,9 @@ const About = ({ data }) => {
                       : SiIcons[interest.icon]
                   return (
                     <div key={`Interest_${index}`}>
-                      <p>
-                        {interest.name}{" "}
-                        {React.createElement(IconName, { className: "icons" })}
+                      <p className="stacks">
+                        {React.createElement(IconName, { className: "icons" })}{" "}
+                        {interest.name}
                       </p>
                     </div>
                   )
@@ -82,6 +81,7 @@ const About = ({ data }) => {
             </section>
           </article>
         </div>
+        <TimelineContainer />
       </section>
     </Layout>
   )

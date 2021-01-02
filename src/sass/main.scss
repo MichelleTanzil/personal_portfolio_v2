@@ -76,10 +76,8 @@ p {
 .underline {
   width: 7rem;
   height: 0.25rem;
-  margin-bottom: 1.25rem;
   background: $hover;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 1.25rem;
 }
 
 .about-page,
@@ -509,7 +507,7 @@ Experiences
 ===============
 */
 .experience-container {
-  background-color: #2e3141;
+  background-color: $white;
 }
 
 /*
@@ -617,10 +615,7 @@ Projects
   display: grid;
 }
 
-.about-stack span {
-  margin-top: 0.5rem;
-}
-.tech-stack {
+.stacks {
   text-align: center;
   color: $btn-primary-li;
   border-radius: $radius;
@@ -758,9 +753,78 @@ Preload
   align-items: center;
 }
 
-.icons {
+/*
+===============
+About Page
+===============
+*/
+.about-page {
+  padding: 7rem 0;
+}
+.about-img {
+  margin-bottom: 2rem;
+  height: 25rem;
+  border: 5px solid $btn-primary-li;
+  border-radius: 30%;
+}
+.about-text .section-title {
+  margin-bottom: 2rem;
+}
+.about-text p {
+  line-height: 2;
+}
+.stack-container {
+  width: 30rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 0.5rem;
+}
+.stack-container span {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+  color: grey;
+}
+.stack-icon {
+  color: grey;
+  margin-right: 0.25rem;
+  font-size: 1rem;
 }
 
+.about-stack {
+  margin-bottom: 1rem;
+  display: grid;
+}
+
+.stacks {
+  text-align: center;
+  color: $btn-primary-li;
+  border-radius: $radius;
+}
+.icons {
+  margin: 0 auto;
+  display: block;
+}
+@media screen and (min-width: $tablet-width) {
+  .about-center {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    column-gap: 4rem;
+  }
+  .about-img {
+    grid-column: 1 / span 5;
+    margin-bottom: 0;
+  }
+  .about-text {
+    grid-column: 6 / -1;
+  }
+
+  .about-stack {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 /*
 ===============
 Contact Page

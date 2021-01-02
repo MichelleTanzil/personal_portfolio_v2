@@ -38,7 +38,7 @@ const Project = project => {
                   : SiIcons[tech.icon]
               return (
                 <div key={`Project_${titleText}_tech_${index}`}>
-                  <p className="tech-stack">
+                  <p className="stacks">
                     {React.createElement(IconName, { className: "icons" })}
                     {tech.techName}{" "}
                   </p>
