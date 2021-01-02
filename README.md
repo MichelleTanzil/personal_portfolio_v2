@@ -4,11 +4,12 @@
 
 - Gatsby
 - React
-- Headless CMS
+- Headless CMS (Prismic)
 - React Icons
 - React Typist
 - React Typist Loop
 - React Helmet
+- React Vertical Timeline Component
 
 ## Credits
 
