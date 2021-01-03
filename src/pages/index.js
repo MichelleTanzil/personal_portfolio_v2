@@ -10,11 +10,11 @@ import PreLoad from "../components/PreLoad"
 import Contact from "../components/Contact"
 
 export default ({ data }) => {
-  const [preLoading, setpreLoading] = useState(true)
+  // const [preLoading, setpreLoading] = useState(true)
 
-  useEffect(() => {
-    setTimeout(() => setpreLoading(false), 1000)
-  }, [])
+  // useEffect(() => {
+  //   setTimeout(() => setpreLoading(false), 1000)
+  // }, [])
 
   const {
     allPrismicProjects: { nodes: projects },
@@ -23,18 +23,19 @@ export default ({ data }) => {
 
   return (
     <>
-      {preLoading === false ? (
-        <Layout>
-          <Hero />
-          <SEO title="Home" description="Home page" />
-          <Services />
-          <Projects projects={projects} title="featured projects" showLink />
-          <Blogs blogs={blogs} title="blog" />
-          <Contact />
-        </Layout>
+      <Layout>
+        <Hero />
+        <SEO title="Home" description="Home page" />
+        <Services />
+        <Projects projects={projects} title="featured projects" showLink />
+        <Blogs blogs={blogs} title="blog" />
+        <Contact />
+      </Layout>
+      {/* {preLoading === false ? (
+
       ) : (
         <PreLoad />
-      )}
+      )} */}
     </>
   )
 }
