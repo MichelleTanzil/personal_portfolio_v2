@@ -586,11 +586,11 @@ Projects
 .container-info {
   background: $white;
   color: $font-secondary-li;
-  box-shadow: $dark-shadow;
+  box-shadow: $light-shadow;
   transition: $transition;
   &:hover {
-    box-shadow: $light-shadow;
-    transform: translateY(5px);
+    box-shadow: $dark-shadow;
+    transform: translateY(-10px);
   }
 }
 
@@ -785,9 +785,6 @@ Contact
   color: $white;
 }
 .custom-shape-divider-top-1609609605 {
-  // position: absolute;
-  // top: 0;
-  // left: 0;
   width: 100%;
   overflow: hidden;
   line-height: 0;
