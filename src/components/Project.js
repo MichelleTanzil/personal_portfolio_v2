@@ -5,7 +5,7 @@ import * as SiIcons from "react-icons/si"
 const Project = project => {
   const {
     narrative: { text: narrative },
-    // hashtags: { text: hashTags },
+    hashtags: { text: hashTags },
     github: { url: githubLink },
     tech_stack,
     title: { text: titleText },
@@ -37,8 +37,6 @@ const Project = project => {
                   : tech.icon[0] === "S"
                   ? SiIcons[tech.icon]
                   : "div"
-              console.log(`Title: ${titleText}`)
-              console.log(`IconName: ${IconName}`)
               return (
                 <div key={`Project_${titleText}_tech_${index}`}>
                   <p className="stacks">
@@ -61,7 +59,7 @@ const Project = project => {
               </a>
             )}
           </div>
-          {/* <p>{hashTags}</p> */}
+          <p>{hashTags}</p>
         </div>
       </div>
     </article>

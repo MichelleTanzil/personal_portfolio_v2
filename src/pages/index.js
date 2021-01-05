@@ -2,12 +2,12 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Hero from "../components/hero/Hero"
-import Services from "../components/Services"
 import Projects from "../components/Projects"
 import SEO from "../components/SEO"
 import Blogs from "../components/Blogs"
 // import PreLoad from "../components/PreLoad"
 import Contact from "../components/Contact"
+import About from "../components/About"
 
 export default ({ data }) => {
   // const [preLoading, setpreLoading] = useState(true)
@@ -19,6 +19,7 @@ export default ({ data }) => {
   const {
     allPrismicProjects: { nodes: projects },
     blog: { nodes: blogs },
+    aboutMe: { nodes: aboutMe },
   } = data
 
   return (
@@ -26,7 +27,7 @@ export default ({ data }) => {
       <Layout>
         <Hero />
         <SEO title="Home" description="Home page" />
-        <Services />
+        <About aboutMe={aboutMe} />
         <Projects projects={projects} title="featured projects" />
         <Blogs blogs={blogs} title="blog" />
         <Contact />
@@ -98,6 +99,40 @@ export const query = graphql`
           }
         }
         id
+      }
+    }
+    aboutMe: allPrismicAbout {
+      nodes {
+        data {
+          details {
+            text
+          }
+          interests {
+            icon {
+              text
+            }
+            interest {
+              text
+            }
+          }
+          skills_stack {
+            icon {
+              text
+            }
+            skill {
+              text
+            }
+          }
+          title {
+            text
+          }
+          image {
+            fluid(maxWidth: 1000) {
+              src
+            }
+            alt
+          }
+        }
       }
     }
   }
