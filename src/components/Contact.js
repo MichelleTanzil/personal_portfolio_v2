@@ -2,7 +2,7 @@ import React from "react"
 
 const Contact = () => {
   return (
-    <section className="contact">
+    <section className="contact" id="contact">
       <div className="custom-shape-divider-top-1609609605">
         <svg
           data-name="Layer 1"

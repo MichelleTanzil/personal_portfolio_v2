@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Hero from "../components/hero/Hero"
@@ -6,7 +6,7 @@ import Services from "../components/Services"
 import Projects from "../components/Projects"
 import SEO from "../components/SEO"
 import Blogs from "../components/Blogs"
-import PreLoad from "../components/PreLoad"
+// import PreLoad from "../components/PreLoad"
 import Contact from "../components/Contact"
 
 export default ({ data }) => {

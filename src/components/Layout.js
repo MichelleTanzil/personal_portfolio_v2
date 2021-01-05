@@ -3,6 +3,12 @@ import Navbar from "./Navbar"
 import Sidebar from "./Sidebar"
 import Footer from "./Footer"
 
+if (typeof window !== "undefined") {
+  // Make scroll behavior of internal links smooth
+  // eslint-disable-next-line global-require
+  require("smooth-scroll")('a[href*="#"]')
+}
+
 const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false)
 
