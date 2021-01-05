@@ -27,7 +27,7 @@ export default ({ data }) => {
         <Hero />
         <SEO title="Home" description="Home page" />
         <Services />
-        <Projects projects={projects} title="featured projects" showLink />
+        <Projects projects={projects} title="featured projects" />
         <Blogs blogs={blogs} title="blog" />
         <Contact />
       </Layout>
@@ -41,7 +41,7 @@ export default ({ data }) => {
 }
 export const query = graphql`
   {
-    allPrismicProjects(filter: { data: { isfeatured: { eq: true } } }) {
+    allPrismicProjects {
       nodes {
         id
         data {

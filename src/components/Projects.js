@@ -1,22 +1,16 @@
 import React from "react"
 import Title from "./Title"
 import Project from "./Project"
-import { Link } from "gatsby"
 
-const Projects = ({ projects, title, showLink }) => {
+const Projects = ({ projects, title }) => {
   return (
-    <section className="section projects" id="projects">
+    <section className="section projects" id="work">
       <Title title={title} />
       <div className="section-center projects-center">
         {projects.map(project => {
           return <Project key={project.id} {...project} />
         })}
       </div>
-      {showLink && (
-        <Link to="/projects" className="brk-btn btn-center">
-          all projects
-        </Link>
-      )}
     </section>
   )
 }
