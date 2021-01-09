@@ -45,6 +45,7 @@ export const query = graphql`
     allPrismicProjects {
       nodes {
         id
+        uid
         data {
           description {
             text
