@@ -18,7 +18,7 @@ body {
   font-family: $ff-secondary;
   line-height: 1.5;
   font-size: 0.875rem;
-  color: $font-primary-li;
+  color: $font-primary-dk;
   margin-top: 5rem;
   background-color: $background-color;
 }
@@ -56,7 +56,7 @@ h4 {
 
 p {
   margin-bottom: 1.25rem;
-  color: $base-beta-li;
+  color: $font-links-dk-other;
 }
 .section-title {
   margin-bottom: 1rem;
@@ -64,7 +64,7 @@ p {
 }
 
 .section {
-  padding: 5rem 0;
+  padding: 3rem 0;
 }
 
 .section-center {
@@ -76,13 +76,10 @@ p {
 .underline {
   width: 7rem;
   height: 0.25rem;
-  background: $hover;
+  background: $underline-dk;
   margin: 0 auto 1.25rem;
 }
 
-.about-page,
-.blog-page,
-.blog-template,
 .error-page,
 .projects-page {
   background: $white;
@@ -124,7 +121,7 @@ Navbar
   font-size: 2rem;
   background: transparent;
   border-color: transparent;
-  color: $base-beta-li;
+  color: $font-links-dk-other;
   cursor: pointer;
   transition: $transition;
 }
@@ -148,7 +145,7 @@ Navbar
   }
   .nav-links a {
     text-transform: capitalize;
-    color: $base-beta-li;
+    color: $font-links-dk;
     font-weight: bold;
     letter-spacing: $spacing;
     transition: $transition;
@@ -156,7 +153,7 @@ Navbar
     font-size: 1rem;
   }
   .nav-links a:hover {
-    color: $base-beta-li;
+    color: $font-links-dk-other;
     box-shadow: 0px 2px $btn-primary-li;
   }
   .nav-center {
@@ -178,7 +175,7 @@ Sidebar
 ===============
 */
 .sidebar {
-  background: $base-alpha-li;
+  background: $font-links-dk;
   position: fixed;
   top: 0;
   left: 0;
@@ -202,7 +199,7 @@ Sidebar
   display: block;
   text-align: center;
   text-transform: capitalize;
-  color: $font-primary-li;
+  color: $font-primary-dk;
   letter-spacing: $spacing;
   margin-bottom: 0.5rem;
   font-size: 2rem;
@@ -210,7 +207,7 @@ Sidebar
   border-radius: $radius;
 }
 .sidebar-links li a:hover {
-  background: $base-beta-li;
+  background: $font-links-dk-other;
   color: $btn-primary-li;
 }
 .close-btn {
@@ -405,14 +402,11 @@ Hero
   border-radius: 30%;
 }
 .hero-info .typing-titles {
-  color: $font-primary-li;
+  color: $font-primary-dk;
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
 
-.hero-icons {
-  justify-items: flex-start;
-}
 .hero .brk-btn {
   margin-top: 1.25rem;
 }
@@ -476,14 +470,14 @@ Services
   transition: $transition;
 }
 .service:hover {
-  background: $base-beta-li;
-  color: $base-alpha-li;
+  background: $font-links-dk-other;
+  color: $font-links-dk;
 }
 .service:hover p {
-  color: $base-alpha-li;
+  color: $font-links-dk;
 }
 .service:hover .underline {
-  background: $base-alpha-li;
+  background: $font-links-dk;
 }
 @media screen and (min-width: $tablet-width) {
   .services-center {
@@ -498,15 +492,6 @@ Services
   .services-center {
     grid-template-columns: 1fr 1fr 1fr;
   }
-}
-
-/*
-===============
-Experiences
-===============
-*/
-.experience-container {
-  background-color: $white;
 }
 
 /*
@@ -549,11 +534,11 @@ Timeline
 }
 
 .timeline-date {
-  color: $white;
+  color: $font-primary-dk;
 }
 .closeMktg {
   font-size: 3rem;
-  color: $white;
+  color: $font-primary-dk;
   margin-left: 80%;
 }
 
@@ -598,7 +583,7 @@ Projects
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 27px;
-  color: $font-primary-li;
+  color: $font-primary-dk;
 }
 
 .project-text {
@@ -678,6 +663,8 @@ Blogs
 .blogs {
   display: flex;
   justify-content: center;
+  min-height: calc(100vh - 15rem);
+  margin-top: 5rem;
 }
 
 .blog {
@@ -780,7 +767,7 @@ Contact
 }
 
 .submit-btn:hover {
-  background-color: $base-alpha-li;
+  background-color: $font-links-dk;
   transition: $transition;
   color: $white;
 }
