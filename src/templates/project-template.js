@@ -1,6 +1,7 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/Layout"
+import Title from "../components/Title"
 const ProjectTemplate = ({ data }) => {
   const {
     title: { text: titleText },
@@ -9,7 +10,9 @@ const ProjectTemplate = ({ data }) => {
     <Layout>
       <section className="project-template">
         <div className="section-center">
-          <article className="project-content">{titleText}</article>
+          <article className="project-content">
+            <Title title={titleText} />
+          </article>
         </div>
       </section>
     </Layout>

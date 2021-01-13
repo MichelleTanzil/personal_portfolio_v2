@@ -81,7 +81,8 @@ p {
 }
 
 .error-page,
-.projects-page {
+.projects-page,
+.project-template {
   background: $white;
   min-height: calc(100vh - 14rem);
 }
@@ -834,7 +835,7 @@ Preload
 
 /*
 ===============
-About Page
+About
 ===============
 */
 .about-page {
@@ -903,4 +904,13 @@ About Page
   .about-stack {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+/*
+===============
+Project Template Pages
+===============
+*/
+.project-template {
+  padding: 5rem 0;
 }
