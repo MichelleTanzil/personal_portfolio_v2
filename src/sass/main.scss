@@ -59,7 +59,7 @@ p {
   color: $font-links-dk;
 }
 .section-title {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   text-align: center;
   color: $font-titles-dk;
 }
@@ -449,13 +449,14 @@ Services
 ===============
 */
 .service {
-  background: $white;
+  background: $container-bg-dk;
   padding: 3rem 1.5rem;
   margin: 2rem 0;
   border-radius: $radius;
   text-align: center;
   -webkit-transition: $transition;
   transition: $transition;
+  box-shadow: $light-shadow;
 }
 .service-icon {
   font-size: 2rem;
@@ -472,15 +473,16 @@ Services
   transition: $transition;
 }
 .service:hover {
-  background: $font-links-dk-other;
-  color: $font-links-dk;
+  background: #150941;
+  color: $underline-dk;
+  p {
+    color: $underline-dk;
+  }
+  .underline {
+    background: $font-primary-dk;
+  }
 }
-.service:hover p {
-  color: $font-links-dk;
-}
-.service:hover .underline {
-  background: $font-links-dk;
-}
+
 @media screen and (min-width: $tablet-width) {
   .services-center {
     display: grid;
@@ -842,7 +844,6 @@ About
   background-color: $background-color-about;
 }
 .about-img {
-  margin-bottom: 2rem;
   height: 25rem;
   border: 5px solid $outline-dk;
   border-radius: 30%;
