@@ -27,7 +27,7 @@ const About = ({ aboutMe }) => {
     }
   })
   return (
-    <section className="section" id="about">
+    <section className="section about" id="about">
       <Title title={`about me`} />
       <div className="section-center about-center">
         <img src={image_url} alt={image_alt} className="about-img" />

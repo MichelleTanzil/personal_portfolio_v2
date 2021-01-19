@@ -56,11 +56,12 @@ h4 {
 
 p {
   margin-bottom: 1.25rem;
-  color: $font-links-dk-other;
+  color: $font-links-dk;
 }
 .section-title {
   margin-bottom: 1rem;
   text-align: center;
+  color: $font-titles-dk;
 }
 
 .section {
@@ -74,7 +75,7 @@ p {
 }
 
 .underline {
-  width: 7rem;
+  width: 9rem;
   height: 0.25rem;
   background: $underline-dk;
   margin: 0 auto 1.25rem;
@@ -602,7 +603,6 @@ Projects
 
 .stacks {
   text-align: center;
-  color: $btn-primary-li;
   border-radius: $radius;
 }
 .icons {
@@ -838,13 +838,13 @@ Preload
 About
 ===============
 */
-.about-page {
-  padding: 7rem 0;
+.about {
+  background-color: $background-color-about;
 }
 .about-img {
   margin-bottom: 2rem;
   height: 25rem;
-  border: 5px solid $btn-primary-li;
+  border: 5px solid $outline-dk;
   border-radius: 30%;
 }
 .about-text .section-title {
@@ -879,7 +879,7 @@ About
 
 .stacks {
   text-align: center;
-  color: $btn-primary-li;
+  color: $outline-dk;
   border-radius: $radius;
 }
 .icons {
