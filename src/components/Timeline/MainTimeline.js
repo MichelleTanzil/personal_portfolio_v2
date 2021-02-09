@@ -4,11 +4,14 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component"
 import "react-vertical-timeline-component/style.min.css"
-import { FaBriefcase, FaSchool, FaPlus } from "react-icons/fa"
+import { FaBriefcase, FaSchool, FaPlusSquare, FaPlus } from "react-icons/fa"
 
 const MainTimeline = ({ handleOpen }) => {
   return (
     <div>
+      <div onClick={handleOpen} className={"closeMktg"}>
+        <FaPlusSquare />
+      </div>
       <VerticalTimeline className={"vertical-timeline-custom-line"}>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
@@ -26,17 +29,20 @@ const MainTimeline = ({ handleOpen }) => {
 
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
-          date="2019-2020"
+          date="2019 - 2020"
           iconClassName={"timeline-icons-alt"}
           dateClassName={"timeline-date"}
           icon={<FaSchool />}
         >
           <h3 className="vertical-timeline-element-title">Coding Dojo</h3>
+          <h4 className="vertical-timeline-element-subtitle">
+            Triple Black Belt - Python, C# (ASP. NET Core), and MEAN
+          </h4>
           <p>Software Development Coding Bootcamp</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          date="2014-2019"
+          date="2014 - 2019"
           iconClassName={"timeline-icons"}
           dateClassName={"timeline-date"}
           icon={<FaBriefcase />}
