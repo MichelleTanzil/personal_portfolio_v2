@@ -5,6 +5,7 @@ import Title from "../components/Title"
 import * as FontAwesome from "react-icons/fa"
 import * as SiIcons from "react-icons/si"
 import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
+import SEO from "../components/SEO"
 
 const ProjectTemplate = ({ data }) => {
   const {
@@ -30,6 +31,7 @@ const ProjectTemplate = ({ data }) => {
   })
   return (
     <Layout>
+      <SEO title={titleText} description={titleText} />
       <section className="project-template">
         <div className="section-center">
           <article className="project-content">
