@@ -1,5 +1,4 @@
 import React from "react"
-import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
 import * as FontAwesome from "react-icons/fa"
 import * as SiIcons from "react-icons/si"
 import { Link } from "gatsby"
@@ -7,11 +6,8 @@ const Project = project => {
   const { uid } = project
   const {
     narrative: { text: narrative },
-    hashtags: { text: hashTags },
-    github: { url: githubLink },
     tech_stack,
     title: { text: titleText },
-    url: { url: deployedLink },
     image: {
       fluid: { src: image_url },
     },
@@ -50,19 +46,6 @@ const Project = project => {
                 )
               })}
             </div>
-            <div className="project-links">
-              {githubLink && (
-                <a href={githubLink} target="_blank">
-                  <FaGithubSquare className="project-icon"></FaGithubSquare>
-                </a>
-              )}
-              {deployedLink && (
-                <a href={deployedLink} target="_blank">
-                  <FaShareSquare className="project-icon"></FaShareSquare>
-                </a>
-              )}
-            </div>
-            <p>{hashTags}</p>
           </div>
         </div>
       </Link>

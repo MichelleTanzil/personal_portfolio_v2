@@ -18,7 +18,7 @@ const query = graphql`
   }
 `
 
-const SEO = ({ title, description }) => {
+const SEO = ({ title, siteTitle, description }) => {
   const { site } = useStaticQuery(query)
   const {
     author,
@@ -26,7 +26,6 @@ const SEO = ({ title, description }) => {
     image,
     keywords,
     siteUrl,
-    siteTitle,
     twitterUsername,
   } = site.siteMetadata
   return (

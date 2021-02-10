@@ -17,6 +17,9 @@ export default ({ data }) => {
   // }, [])
 
   const {
+    site: {
+      siteMetadata: { siteTitle },
+    },
     allPrismicProjects: { nodes: projects },
     blog: { nodes: blogs },
     aboutMe: { nodes: aboutMe },
@@ -26,7 +29,7 @@ export default ({ data }) => {
     <>
       <Layout>
         <Hero />
-        <SEO title="Home" description="Home page" />
+        <SEO title="Home" siteTitle={siteTitle} description="Home page" />
         <About aboutMe={aboutMe} />
         <Projects projects={projects} title="work" />
         <Blogs blogs={blogs} title="blog" />
@@ -42,6 +45,11 @@ export default ({ data }) => {
 }
 export const query = graphql`
   {
+    site {
+      siteMetadata {
+        siteTitle: title
+      }
+    }
     allPrismicProjects {
       nodes {
         id
