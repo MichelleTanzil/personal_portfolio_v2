@@ -9,8 +9,9 @@ import { FaBriefcase, FaRegWindowClose } from "react-icons/fa"
 const MarketingTimeline = ({ handleOpen }) => {
   return (
     <div>
-      <div onClick={handleOpen} className={"closeMktg"}>
+      <div onClick={handleOpen} className="closeMktg tooltip">
         <FaRegWindowClose />
+        <span class="tooltiptext">Overview Experience</span>
       </div>
       <VerticalTimeline className={"vertical-timeline-custom-line"}>
         <VerticalTimelineElement

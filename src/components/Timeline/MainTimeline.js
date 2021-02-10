@@ -9,8 +9,9 @@ import { FaBriefcase, FaSchool, FaPlusSquare, FaPlus } from "react-icons/fa"
 const MainTimeline = ({ handleOpen }) => {
   return (
     <div>
-      <div onClick={handleOpen} className={"closeMktg"}>
+      <div onClick={handleOpen} className="closeMktg tooltip">
         <FaPlusSquare />
+        <span class="tooltiptext">Marketing & Sales Support Experience</span>
       </div>
       <VerticalTimeline className={"vertical-timeline-custom-line"}>
         <VerticalTimelineElement
