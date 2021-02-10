@@ -11,11 +11,9 @@ const Blog = blog => {
   return (
     <article className="blog">
       <a href={url} target="_blank">
-        <div className="container-info">
+        <div className="blog-title">
           <img src={image_url} className="blog-img" alt={image_alt} />
-          <div className="project-details">
-            <h3>{titleText}</h3>
-          </div>
+          <h3 className="blog-details">{titleText}</h3>
         </div>
       </a>
     </article>
