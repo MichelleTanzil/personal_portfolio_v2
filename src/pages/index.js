@@ -47,12 +47,6 @@ export const query = graphql`
         id
         uid
         data {
-          description {
-            text
-          }
-          github {
-            url
-          }
           tech_stack {
             technology {
               text
@@ -64,9 +58,6 @@ export const query = graphql`
           title {
             text
           }
-          url {
-            url
-          }
           isfeatured
           image {
             fluid(maxWidth: 1000) {
@@ -75,9 +66,6 @@ export const query = graphql`
             alt
           }
           narrative {
-            text
-          }
-          hashtags {
             text
           }
         }
