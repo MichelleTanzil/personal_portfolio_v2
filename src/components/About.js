@@ -4,6 +4,7 @@ import * as FontAwesome from "react-icons/fa"
 import * as SiIcons from "react-icons/si"
 import TimelineContainer from "./Timeline/TimelineContainer"
 import Services from "./Services"
+import Mottos from "../constants/mottos"
 
 const About = ({ aboutMe }) => {
   const dataRetrieved = aboutMe[0].data
@@ -28,10 +29,10 @@ const About = ({ aboutMe }) => {
   })
   return (
     <section className="section about" id="about">
-      <Title title={`about me`} />
       <div className="section-center about-center">
         <img src={image_url} alt={image_alt} className="about-img" />
         <article className="about-text">
+          <Title title={`about me`} />
           <p>{description}</p>
           {/* Skills section */}
           <section>
@@ -76,6 +77,11 @@ const About = ({ aboutMe }) => {
                 )
               })}
             </div>
+          </section>
+          {/* Motto section */}
+          <section>
+            <Title title={`Mottos`} />
+            <Mottos />
           </section>
         </article>
       </div>
