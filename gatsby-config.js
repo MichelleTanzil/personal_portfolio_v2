@@ -54,7 +54,7 @@ module.exports = {
           `Noto Sans`,
           `Raleway`,
           `Helvetica`,
-          `Lexend Mega`,
+          `Montserrat`,
         ],
       },
     },

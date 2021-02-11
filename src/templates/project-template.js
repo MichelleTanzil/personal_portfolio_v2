@@ -31,7 +31,7 @@ const ProjectTemplate = ({ data }) => {
   })
   return (
     <Layout>
-      <SEO title={titleText} description={titleText} />
+      <SEO title="Project" siteTitle={titleText} description={titleText} />
       <section className="project-template">
         <div className="section-center">
           <article className="project-content">
