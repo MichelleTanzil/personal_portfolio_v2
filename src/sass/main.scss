@@ -20,7 +20,6 @@ body {
   font-size: 0.875rem;
   color: $font-primary-dk;
   margin-top: 5rem;
-  background-color: $background-color;
 }
 
 ul {
@@ -445,114 +444,11 @@ Hero
 
 /*
 ===============
-Services
-===============
-*/
-.service {
-  background: $container-bg-dk;
-  padding: 3rem 1.5rem;
-  margin: 2rem 0;
-  border-radius: $radius;
-  text-align: center;
-  -webkit-transition: $transition;
-  transition: $transition;
-  box-shadow: $light-shadow;
-}
-.service-icon {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-.service .underline {
-  width: 3rem;
-  height: 0.12rem;
-  -webkit-transition: $transition;
-  transition: $transition;
-}
-.service p {
-  -webkit-transition: $transition;
-  transition: $transition;
-}
-.service:hover {
-  background: #150941;
-  color: $underline-dk;
-  p {
-    color: $underline-dk;
-  }
-  .underline {
-    background: $font-primary-dk;
-  }
-}
-
-@media screen and (min-width: $tablet-width) {
-  .services-center {
-    display: grid;
-    grid-template-columns: 1fr;
-    -webkit-column-gap: 2rem;
-    -moz-column-gap: 2rem;
-    column-gap: 2rem;
-  }
-}
-@media screen and (min-width: $desktop-width) {
-  .services-center {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-/*
-===============
-Timeline
-===============
-*/
-
-/* The line */
-.vertical-timeline.vertical-timeline-custom-line {
-  &::before {
-    background: #424242;
-  }
-}
-
-/* Icon container's border */
-.vertical-timeline.vertical-timeline-custom-line {
-  .vertical-timeline-element--work {
-    .vertical-timeline-element-icon {
-      box-shadow: 0 0 0 4px #1976d2, inset 0 2px 0 rgba(0, 0, 0, 0.08),
-        0 3px 0 4px rgba(0, 0, 0, 0.05);
-    }
-  }
-}
-
-.vertical-timeline.vertical-timeline-custom-line
-  .vertical-timeline-element--education
-  .vertical-timeline-element-icon {
-  box-shadow: 0 0 0 4px #c2185b, inset 0 2px 0 rgba(0, 0, 0, 0.08),
-    0 3px 0 4px rgba(0, 0, 0, 0.05);
-}
-.timeline-icons {
-  background: #2196f3;
-  color: #fff;
-}
-
-.timeline-icons-alt {
-  background: #e91e63;
-  color: #fff;
-}
-
-.timeline-date {
-  color: $font-primary-dk;
-}
-.closeMktg {
-  font-size: 3rem;
-  color: $font-primary-dk;
-  margin-left: 80%;
-}
-
-/*
-===============
 Projects
 ===============
 */
 .projects {
-  background: $background-color;
+  background: $background-color-projects;
 }
 .projects-center {
   display: grid;
@@ -573,10 +469,12 @@ Projects
 }
 
 .container-info {
-  background: $white;
+  background: $container-bg-dk;
   color: $font-secondary-li;
   box-shadow: $light-shadow;
   transition: $transition;
+  -webkit-transform: translateZ(0);
+  height: 100%;
   &:hover {
     box-shadow: $dark-shadow;
     transform: translateY(-10px);
@@ -586,7 +484,6 @@ Projects
 .container-info h3 {
   font-weight: 700;
   font-size: 1.5rem;
-  line-height: 27px;
   color: $font-primary-dk;
 }
 
@@ -594,7 +491,7 @@ Projects
   border-bottom: $underline;
   padding-bottom: $bottom-padding;
   margin-bottom: 1.5rem;
-  color: $font-secondary-li;
+  color: $font-links-dk;
   letter-spacing: 0.1em;
 }
 
@@ -663,6 +560,9 @@ Projects
 Blogs
 ===============
 */
+.blog-section {
+  background-color: $background-color-blog;
+}
 .blogs {
   display: flex;
   justify-content: center;
@@ -681,6 +581,29 @@ Blogs
   border-top-right-radius: $radius;
   object-fit: cover;
   width: 100%;
+  background-color: black;
+}
+
+.blog-title {
+  background: $container-bg-dk;
+  box-shadow: $light-shadow;
+  transition: $transition;
+  -webkit-transform: translateZ(0);
+  height: 100%;
+  &:hover {
+    box-shadow: $dark-shadow;
+    transform: translateY(-10px);
+  }
+}
+
+.blog-details {
+  color: $font-titles-dk;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 27px;
+  padding: 1rem;
+  margin-top: 10%;
 }
 
 @media screen and (min-width: $mobile-width) {
@@ -706,7 +629,7 @@ Contact
 */
 
 .contact {
-  background: #222;
+  background: $footer-grey;
   min-height: calc(100vh - 9rem);
 }
 .contact-page {
@@ -715,7 +638,7 @@ Contact
   padding: 5rem 0;
 }
 .contact-form {
-  background: #222;
+  background: $footer-grey;
   border-radius: $radius;
   transition: $transition;
   width: 90vw;
@@ -789,7 +712,7 @@ Contact
 }
 
 .custom-shape-divider-top-1609609605 .shape-fill {
-  fill: $background-color;
+  fill: $background-color-blog;
 }
 
 /*
@@ -799,7 +722,7 @@ Footer
 */
 .footer {
   height: 9rem;
-  background: #222;
+  background: $footer-grey;
   text-align: center;
   display: grid;
   place-items: center;
@@ -847,13 +770,9 @@ About
   height: 25rem;
   border: 5px solid $outline-dk;
   border-radius: 30%;
+  display: none;
 }
-.about-text .section-title {
-  margin-bottom: 2rem;
-}
-.about-text p {
-  line-height: 2;
-}
+
 .stack-container {
   width: 30rem;
   display: grid;
@@ -887,7 +806,197 @@ About
   margin: 0 auto;
   display: block;
 }
+
+.mottos {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1.75rem;
+  font-family: "Montserrat";
+  .motto p {
+    color: $motto-grey;
+    letter-spacing: 3px;
+  }
+}
+
+/*
+===============
+Services
+===============
+*/
+.service {
+  background: $container-bg-dk;
+  margin-top: 2rem;
+  border-radius: $radius;
+  text-align: center;
+  -webkit-transition: $transition;
+  transition: $transition;
+  box-shadow: $light-shadow;
+}
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.service .underline {
+  width: 3rem;
+  height: 0.12rem;
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+.service p {
+  -webkit-transition: $transition;
+  transition: $transition;
+}
+.service:hover {
+  background: $service-hover;
+  color: $underline-dk;
+  p {
+    color: $underline-dk;
+  }
+  .underline {
+    background: $font-primary-dk;
+  }
+}
+
+/*
+===============
+Experience Timeline
+===============
+*/
+
+/* Tooltip */
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 12rem;
+  background-color: $container-bg-dk;
+  color: $font-links-dk;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: "Raleway", "Helvetica", sans-serif;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 103%;
+  left: -25%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: $container-bg-dk transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+/* The line */
+.vertical-timeline.vertical-timeline-custom-line {
+  &::before {
+    background: $base-primary-dk;
+    box-shadow: $light-shadow;
+  }
+}
+.vertical-timeline-element-subtitle {
+  color: $font-links-dk;
+  text-transform: initial;
+}
+/* Icon container's border */
+.vertical-timeline.vertical-timeline-custom-line {
+  .vertical-timeline-element--work {
+    .vertical-timeline-element-icon {
+      box-shadow: 0 0 0 4px $outline-dk, inset 0 2px 0 rgba(0, 0, 0, 0.08),
+        0 3px 0 4px rgba(0, 0, 0, 0.05);
+    }
+    .vertical-timeline-element-content {
+      background: $container-bg-dk;
+      box-shadow: $light-shadow;
+    }
+    .vertical-timeline-element-content-arrow {
+      border-right: 7px solid $container-bg-dk;
+    }
+    .vertical-timeline-element-content p {
+      font-size: 0.85rem;
+    }
+  }
+}
+.vertical-timeline.vertical-timeline-custom-line {
+  .vertical-timeline-element--education {
+    .vertical-timeline-element-icon {
+      box-shadow: 0 0 0 4px $outline-dk, inset 0 2px 0 rgba(0, 0, 0, 0.08),
+        0 3px 0 4px rgba(0, 0, 0, 0.05);
+    }
+    .vertical-timeline-element-content {
+      background: $container-bg-dk;
+      box-shadow: $light-shadow;
+    }
+    .vertical-timeline-element-content-arrow {
+      border-right: 7px solid $container-bg-dk;
+    }
+    .vertical-timeline-element-content p {
+      font-size: 0.85rem;
+    }
+  }
+}
+
+.timeline-icons {
+  background: $base-secondary-dk;
+  color: $grey;
+}
+
+.timeline-icons-alt {
+  background: $base-tertiary-dk;
+  color: $grey;
+}
+
+.timeline-date {
+  color: $underline-dk;
+}
+.closeMktg {
+  font-size: 3rem;
+  color: $font-primary-dk;
+  margin-left: 80%;
+}
+
+/*
+Media Queries for About Me section
+*/
 @media screen and (min-width: $tablet-width) {
+  .service {
+    padding: 1.5rem 1rem;
+  }
+  .services-center {
+    margin-top: 3rem;
+  }
+  .vertical-timeline {
+    padding: 0 1rem;
+  }
+  .experience-container {
+    padding: 1.5rem 1rem;
+  }
+}
+@media screen and (min-width: $desktop-width) {
   .about-center {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -897,6 +1006,7 @@ About
   .about-img {
     grid-column: 1 / span 5;
     margin-bottom: 0;
+    display: inline-block;
   }
   .about-text {
     grid-column: 6 / -1;
@@ -905,8 +1015,33 @@ About
   .about-stack {
     grid-template-columns: repeat(4, 1fr);
   }
+  .service {
+    padding: 3rem 1.5rem;
+  }
+  .services-center {
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    -webkit-column-gap: 2rem;
+    -moz-column-gap: 2rem;
+    column-gap: 2rem;
+  }
 }
 
+@media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+  .about-center {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    column-gap: 4rem;
+  }
+  .about-text {
+    grid-column: 1 / -1;
+  }
+
+  .about-stack {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
 /*
 ===============
 Project Template Pages
