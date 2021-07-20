@@ -11,20 +11,50 @@ const MainTimeline = ({ handleOpen }) => {
     <div>
       <div onClick={handleOpen} className="closeMktg tooltip">
         <FaPlusSquare />
-        <span class="tooltiptext">Marketing & Sales Support Experience</span>
+        <span className="tooltiptext">
+          Marketing & Sales Support Experience
+        </span>
       </div>
       <VerticalTimeline className={"vertical-timeline-custom-line"}>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           iconClassName={"timeline-icons"}
-          date="2020 - present"
+          date="2021 - 2021"
+          dateClassName={"timeline-date"}
+          icon={<FaBriefcase />}
+        >
+          <h3 className="vertical-timeline-element-title">Software Engineer</h3>
+          <h4 className="vertical-timeline-element-subtitle">Microsoft</h4>
+          <p></p>
+        </VerticalTimelineElement>
+
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          iconClassName={"timeline-icons"}
+          date="2021 - 2021"
+          dateClassName={"timeline-date"}
+          icon={<FaBriefcase />}
+        >
+          <h3 className="vertical-timeline-element-title">Software Engineer</h3>
+          <h4 className="vertical-timeline-element-subtitle">
+            Microsoft LEAP Apprenticeship Program
+          </h4>
+          <p></p>
+        </VerticalTimelineElement>
+
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          iconClassName={"timeline-icons"}
+          date="2020 - 2021"
           dateClassName={"timeline-date"}
           icon={<FaBriefcase />}
         >
           <h3 className="vertical-timeline-element-title">
             Developer Support Engineer
           </h3>
-          <h4 className="vertical-timeline-element-subtitle">Voxology, Inc.</h4>
+          <h4 className="vertical-timeline-element-subtitle">
+            Voxology and Shoutpoint
+          </h4>
           <p></p>
         </VerticalTimelineElement>
 

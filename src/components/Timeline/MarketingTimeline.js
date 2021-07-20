@@ -11,7 +11,7 @@ const MarketingTimeline = ({ handleOpen }) => {
     <div>
       <div onClick={handleOpen} className="closeMktg tooltip">
         <FaRegWindowClose />
-        <span class="tooltiptext">Overview Experience</span>
+        <span className="tooltiptext">Overview Experience</span>
       </div>
       <VerticalTimeline className={"vertical-timeline-custom-line"}>
         <VerticalTimelineElement
