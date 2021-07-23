@@ -15,7 +15,6 @@ const ProjectTemplate = ({ data }) => {
     },
     image: { alt: image_alt },
     completed_on,
-    status,
     description: { text: descriptionText },
     github: { url: githubLink },
     url: { url: deployedLink },
@@ -29,56 +28,73 @@ const ProjectTemplate = ({ data }) => {
       icon: tech.icon.text,
     }
   })
+
   return (
     <Layout>
-      <SEO title="Project" siteTitle={titleText} description={titleText} />
-      <section className="project-template">
+      <SEO
+        title="Work"
+        siteTitle={titleText}
+        description={`${titleText}'s page`}
+      />
+      <section className="project-template section">
         <div className="section-center">
           <article className="project-content">
             <Title title={titleText} />
-            <div>
+            <div className="project-template-details">
               <img
                 src={image_url}
                 className="project-template-img"
                 alt={image_alt}
               />
-              <p className="project-text">{descriptionText}</p>
-            </div>
-            <div>
-              <div className="project-stack">
-                {techStack.map((tech, index) => {
-                  // Dynamically create the icons
-                  const IconName =
-                    tech.icon[0] === "F"
-                      ? FontAwesome[tech.icon]
-                      : tech.icon[0] === "S"
-                      ? SiIcons[tech.icon]
-                      : "div"
-                  return (
-                    <div key={`Project_${titleText}_tech_${index}`}>
-                      <p className="stacks">
-                        {React.createElement(IconName, { className: "icons" })}
-                        {tech.techName}{" "}
-                      </p>
-                    </div>
-                  )
-                })}
+              <div>
+                <div>
+                  <h3 className="project-template-title">description</h3>
+                  <p className="project-template-info">{descriptionText}</p>
+                </div>
+                <h3 className="project-template-title">tech stack</h3>
+                <div className="project-stack">
+                  {techStack.map((tech, index) => {
+                    // Dynamically create the icons
+                    const IconName =
+                      tech.icon[0] === "F"
+                        ? FontAwesome[tech.icon]
+                        : tech.icon[0] === "S"
+                        ? SiIcons[tech.icon]
+                        : "div"
+                    return (
+                      <div key={`Project_${titleText}_tech_${index}`}>
+                        <p className="stacks">
+                          {React.createElement(IconName, {
+                            className: "icons",
+                          })}
+                          {tech.techName}{" "}
+                        </p>
+                      </div>
+                    )
+                  })}
+                </div>
+                <div>
+                  <h3 className="project-template-title">more details</h3>
+                  <div className="project-links">
+                    {githubLink && (
+                      <a href={githubLink} target="_blank" rel="norefferer">
+                        <FaGithubSquare className="project-icon"></FaGithubSquare>
+                      </a>
+                    )}
+                    {deployedLink && (
+                      <a href={deployedLink} target="_blank" rel="norefferer">
+                        <FaShareSquare className="project-icon"></FaShareSquare>
+                      </a>
+                    )}
+                  </div>
+                  {completed_on && (
+                    <p className="project-template-info">
+                      Completed on: {completed_on}
+                    </p>
+                  )}
+                  <p className="project-template-info">{hashTags}</p>
+                </div>
               </div>
-              <div className="project-links">
-                {githubLink && (
-                  <a href={githubLink} target="_blank">
-                    <FaGithubSquare className="project-icon"></FaGithubSquare>
-                  </a>
-                )}
-                {deployedLink && (
-                  <a href={deployedLink} target="_blank">
-                    <FaShareSquare className="project-icon"></FaShareSquare>
-                  </a>
-                )}
-              </div>
-              <p>Hashtags: {hashTags}</p>
-              <p>Status: {status}</p>
-              {completed_on && <p>Completed on: {completed_on}</p>}
             </div>
           </article>
         </div>
@@ -88,8 +104,8 @@ const ProjectTemplate = ({ data }) => {
 }
 
 export const query = graphql`
-  query GetSingleProject($slug: String) {
-    project: prismicProjects(uid: { eq: $slug }) {
+  query GetSingleProject($uid: String) {
+    project: prismicProjects(uid: { eq: $uid }) {
       data {
         completed_on(formatString: "MM/YYYY")
         description {
@@ -106,7 +122,6 @@ export const query = graphql`
             src
           }
         }
-        status
         title {
           text
         }
