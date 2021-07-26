@@ -30,7 +30,7 @@ const ProjectTemplate = ({ data }) => {
   })
 
   return (
-    <Layout>
+    <Layout isTemplatePage={true}>
       <SEO
         title="Work"
         siteTitle={titleText}

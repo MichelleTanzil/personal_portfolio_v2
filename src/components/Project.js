@@ -2,6 +2,7 @@ import React from "react"
 import * as FontAwesome from "react-icons/fa"
 import * as SiIcons from "react-icons/si"
 import { Link } from "gatsby"
+
 const Project = project => {
   const { uid } = project
   const {
@@ -19,6 +20,7 @@ const Project = project => {
       icon: tech.icon.text,
     }
   })
+
   return (
     <article className="project">
       <Link to={`/projects/${uid}`}>
