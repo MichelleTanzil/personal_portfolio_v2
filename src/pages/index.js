@@ -9,7 +9,7 @@ import Blogs from "../components/Blogs"
 import Contact from "../components/Contact"
 import About from "../components/About"
 
-export default ({ data }) => {
+const index = ({ data }) => {
   // const [preLoading, setpreLoading] = useState(true)
 
   // useEffect(() => {
@@ -27,7 +27,7 @@ export default ({ data }) => {
 
   return (
     <>
-      <Layout>
+      <Layout isTemplatePage={false}>
         <Hero />
         <SEO title="Home" siteTitle={siteTitle} description="Home page" />
         <About aboutMe={aboutMe} />
@@ -134,3 +134,4 @@ export const query = graphql`
     }
   }
 `
+export default index
