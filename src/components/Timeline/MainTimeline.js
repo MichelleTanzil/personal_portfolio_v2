@@ -9,7 +9,12 @@ import { FaBriefcase, FaSchool, FaPlusSquare, FaPlus } from "react-icons/fa"
 const MainTimeline = ({ handleOpen }) => {
   return (
     <div>
-      <div onClick={handleOpen} className="closeMktg tooltip">
+      <div
+        onClick={handleOpen}
+        className="closeMktg tooltip"
+        onKeyDown={handleOpen}
+        role="presentation"
+      >
         <FaPlusSquare />
         <span className="tooltiptext">
           Marketing & Sales Support Experience

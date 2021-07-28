@@ -10,7 +10,7 @@ const Blog = blog => {
   } = blog.data
   return (
     <article className="blog">
-      <a href={url} target="_blank">
+      <a href={url} target="_blank" rel="noopener noreferrer">
         <div className="blog-title">
           <img src={image_url} className="blog-img" alt={image_alt} />
           <h3 className="blog-details">{titleText}</h3>

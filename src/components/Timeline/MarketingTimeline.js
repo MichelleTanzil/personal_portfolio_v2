@@ -9,7 +9,12 @@ import { FaBriefcase, FaRegWindowClose } from "react-icons/fa"
 const MarketingTimeline = ({ handleOpen }) => {
   return (
     <div>
-      <div onClick={handleOpen} className="closeMktg tooltip">
+      <div
+        onClick={handleOpen}
+        className="closeMktg tooltip"
+        onKeyDown={handleOpen}
+        role="presentation"
+      >
         <FaRegWindowClose />
         <span className="tooltiptext">Overview Experience</span>
       </div>
