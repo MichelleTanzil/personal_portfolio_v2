@@ -1,7 +1,4 @@
 import React from "react"
-import Image from "gatsby-image"
-import { Link } from "gatsby"
-import { graphql, useStaticQuery } from "gatsby"
 import Titles from "./typewriter-title"
 
 const Hero = () => {
@@ -12,10 +9,7 @@ const Hero = () => {
           <div>
             <div className="underline"> </div>
             <h1>i'm michelle</h1>
-            {/* <Titles /> */}
-            {/* <Link to="/about" className="brk-btn">
-              More About Me
-            </Link> */}
+            <Titles />
           </div>
         </article>
       </div>

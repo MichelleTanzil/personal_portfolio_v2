@@ -1,16 +1,16 @@
-import React, { useState } from "react"
+import React from "react"
 import Typist from "react-typist"
 import TypistLoop from "react-typist-loop"
 
 const Titles = () => {
   const titles = [
+    "Software Engineer",
     "Nerd",
     "Gamer",
     "Critter - Critical Role",
     "Foodie",
     "Web Developer",
     "Full Stack Developer",
-    "Software Engineer",
     "Developer Support Engineer",
     "Open Source Contributor",
   ]
