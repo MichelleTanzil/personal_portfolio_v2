@@ -1,11 +1,12 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
 import Title from "../components/Title"
 import * as FontAwesome from "react-icons/fa"
 import * as SiIcons from "react-icons/si"
 import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
 import SEO from "../components/SEO"
+import { ImArrowLeft } from "react-icons/im"
 
 const ProjectTemplate = ({ data }) => {
   const {
@@ -38,6 +39,9 @@ const ProjectTemplate = ({ data }) => {
       />
       <section className="project-template section">
         <div className="section-center">
+          <Link to="/" className="bk-btn">
+            <ImArrowLeft /> Back Home
+          </Link>
           <article className="project-content">
             <Title title={titleText} />
             <div className="project-template-details">
@@ -77,12 +81,20 @@ const ProjectTemplate = ({ data }) => {
                   <h3 className="project-template-title">more details</h3>
                   <div className="project-links">
                     {githubLink && (
-                      <a href={githubLink} target="_blank" rel="norefferer">
+                      <a
+                        href={githubLink}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
                         <FaGithubSquare className="project-icon"></FaGithubSquare>
                       </a>
                     )}
                     {deployedLink && (
-                      <a href={deployedLink} target="_blank" rel="norefferer">
+                      <a
+                        href={deployedLink}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
                         <FaShareSquare className="project-icon"></FaShareSquare>
                       </a>
                     )}

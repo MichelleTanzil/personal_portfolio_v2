@@ -33,7 +33,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: $ff-titles;
+  font-family: $ff-header-tags;
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
@@ -93,6 +93,17 @@ p {
   color: $off-white;
   cursor: pointer;
   transition: $transition;
+  &:hover {
+    color: $underline-dk;
+  }
+}
+
+.bk-btn {
+  font-size: 1rem;
+  text-align: center;
+  color: $off-white;
+  background: transparent;
+  border-color: transparent;
   &:hover {
     color: $underline-dk;
   }
@@ -162,11 +173,12 @@ Navbar
     transition: $transition;
     padding: 0.5rem 0;
     font-size: 1rem;
+    &:hover {
+      color: $font-links-dk-other;
+      box-shadow: 0px 2px $btn-primary-li;
+    }
   }
-  .nav-links a:hover {
-    color: $font-links-dk-other;
-    box-shadow: 0px 2px $btn-primary-li;
-  }
+
   .nav-center {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -180,7 +192,7 @@ Sidebar
 ===============
 */
 .sidebar {
-  background: $font-links-dk;
+  background: $sidebar-dk;
   position: fixed;
   top: 0;
   left: 0;
@@ -204,17 +216,18 @@ Sidebar
   display: block;
   text-align: center;
   text-transform: capitalize;
-  color: $font-primary-dk;
+  color: $font-links-dk;
   letter-spacing: $spacing;
   margin-bottom: 0.5rem;
   font-size: 2rem;
   transition: $transition;
   border-radius: $radius;
+  &:hover {
+    background: $font-links-dk-other;
+    color: $font-primary-dk;
+  }
 }
-.sidebar-links li a:hover {
-  background: $font-links-dk-other;
-  color: $btn-primary-li;
-}
+
 .close-btn {
   position: absolute;
   right: 4.75%;
@@ -364,12 +377,12 @@ Social Links
 
 .social-link {
   font-size: 1.75rem;
-  // color: var(--clr-grey-1);
   transition: $transition;
+  color: $off-white;
+  &:hover {
+    color: $underline-dk;
+  }
 }
-// .social-link:hover {
-//   color: var(--clr-primary-5);
-// }
 
 /*
 ===============
@@ -409,7 +422,9 @@ Hero
 .hero-info .typing-titles {
   color: $font-primary-dk;
   margin-bottom: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
+  font-family: $ff-titles;
+  letter-spacing: 0.1em;
 }
 
 .hero .brk-btn {
@@ -421,9 +436,6 @@ Hero
     grid-template-columns: repeat(12, 1fr);
   }
 
-  // .hero h4 {
-  //   font-size: 0.85rem;
-  // }
   .hero-info {
     grid-row: 1/1;
     grid-column: 3 / span 12;
@@ -436,11 +448,6 @@ Hero
   }
 }
 @media screen and (min-width: $desktop-width) {
-  // .hero h4 {
-  //   font-size: 1rem;
-  //   line-height: 1;
-  // }
-
   .hero-img {
     width: 350px;
   }
@@ -671,7 +678,7 @@ Contact
   border-radius: $radius;
   border: 0;
   text-transform: uppercase;
-  font-family: $ff-titles;
+  font-family: $ff-header-tags;
   cursor: pointer;
   font-weight: 700;
   height: 3.75em;
@@ -682,13 +689,13 @@ Contact
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
+  &:hover {
+    background-color: $font-links-dk;
+    transition: $transition;
+    color: $white;
+  }
 }
 
-.submit-btn:hover {
-  background-color: $font-links-dk;
-  transition: $transition;
-  color: $white;
-}
 .custom-shape-divider-top-1609609605 {
   width: 100%;
   overflow: hidden;
@@ -732,9 +739,9 @@ Footer
 }
 .footer .social-link {
   color: $font-grey-li;
-}
-.footer .social-link:hover {
-  color: $white;
+  &:hover {
+    color: $white;
+  }
 }
 
 /*
@@ -823,6 +830,16 @@ Services
   -webkit-transition: $transition;
   transition: $transition;
   box-shadow: $light-shadow;
+  &:hover {
+    background: $service-hover;
+    color: $underline-dk;
+    p {
+      color: $btn-secondary-li;
+    }
+    .underline {
+      background: $font-primary-dk;
+    }
+  }
 }
 .service-icon {
   font-size: 2rem;
@@ -837,16 +854,6 @@ Services
 .service p {
   -webkit-transition: $transition;
   transition: $transition;
-}
-.service:hover {
-  background: $service-hover;
-  color: $underline-dk;
-  p {
-    color: $btn-secondary-li;
-  }
-  .underline {
-    background: $font-primary-dk;
-  }
 }
 
 /*
@@ -974,6 +981,12 @@ Experience Timeline
 /*
 Media Queries for About Me section
 */
+@media screen and (min-width: $mobile-width) {
+  .service {
+    padding: 1.5rem 1rem;
+  }
+}
+
 @media screen and (min-width: $tablet-width) {
   .service {
     padding: 1.5rem 1rem;
@@ -1035,11 +1048,13 @@ Media Queries for About Me section
     grid-template-columns: repeat(5, 1fr);
   }
 }
+
 /*
 ===============
 Project Template Pages
 ===============
 */
+
 .project-template {
   background-color: $project-template-bg;
 }
@@ -1073,9 +1088,9 @@ Project Template Pages
   border-color: transparent;
   cursor: pointer;
   transition: $transition;
-  color: $off-white;
   transition: $transition;
   margin-right: 0.5rem;
+  color: $off-white;
   &:hover {
     color: $underline-dk;
   }
@@ -1108,5 +1123,78 @@ Project Template Pages
 
   .project-template-img {
     height: 22rem;
+  }
+}
+
+/*
+===============
+404 page
+===============
+*/
+.error-page {
+  padding-top: 5rem;
+  background: $container-bg-dk;
+}
+
+.error-container {
+  display: grid;
+  align-items: center;
+}
+
+.error-info {
+  display: grid;
+  justify-self: stretch;
+  align-items: center;
+  height: 100%;
+}
+
+.error-underline {
+  width: 16rem;
+  height: 0.25rem;
+  background: #9e9eff;
+  margin-top: 0.25rem;
+}
+
+.error-link {
+  font-size: 2rem;
+  text-align: center;
+  color: $off-white;
+  background: transparent;
+  border-color: transparent;
+  text-transform: uppercase;
+  &:hover {
+    color: $underline-dk;
+  }
+}
+
+@media screen and (min-width: $mobile-width) {
+  .error-img {
+    height: 19rem;
+  }
+  .error-info {
+    margin-top: 3rem;
+  }
+}
+@media screen and (min-width: $tablet-width) {
+  .error-img {
+    height: 22rem;
+  }
+
+  .error-info {
+    margin-top: 3rem;
+  }
+}
+@media screen and (min-width: $desktop-width) {
+  .error-img {
+    height: 22rem;
+  }
+  .error-container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2em;
+  }
+
+  .error-info {
+    grid-auto-rows: 1fr;
+    margin-left: 3rem;
   }
 }

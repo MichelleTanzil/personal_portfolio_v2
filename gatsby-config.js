@@ -55,6 +55,7 @@ module.exports = {
           `Raleway`,
           `Helvetica`,
           `Montserrat`,
+          "Source Code Pro",
         ],
       },
     },
